@@ -1,0 +1,193 @@
+{
+  "batch_id": "evaluation_v1_batch2",
+  "caveat": "These metrics cover only a deliberately selected representative subset, not the full benchmark. They validate the manual-review and offline-scoring workflow and must not be presented as overall translation-quality claims.",
+  "completed_count": 10,
+  "manual_review_schema_version": 2,
+  "metrics_by_mode": {
+    "agent": {
+      "agent_judgment": {
+        "accuracy_pct": 60.0,
+        "confusion": {
+          "false_negative": 2,
+          "false_positive": 0,
+          "true_negative": 3,
+          "true_positive": 0
+        },
+        "denominator": 5,
+        "revision_recall_pct": 0.0,
+        "unnecessary_revision_rate_pct": 0.0
+      },
+      "ambiguous": 0,
+      "completed": 5,
+      "component_failure_count": 0,
+      "confirmed": 5,
+      "confirmed_error_type_counts": {
+        "entity_value": 0,
+        "fluency_grammar": 0,
+        "meaning": 0,
+        "omission_addition": 2,
+        "other": 0,
+        "term": 1
+      },
+      "confirmed_outcome_counts": {
+        "improved": 0,
+        "same": 5,
+        "worse": 0
+      },
+      "confirmed_primary_error_counts": {
+        "entity_value": 0,
+        "fluency_grammar": 0,
+        "meaning": 0,
+        "omission_addition": 2,
+        "other": 0,
+        "term": 0
+      },
+      "confirmed_severity_counts": {
+        "MAJOR": 2,
+        "MINOR": 0
+      },
+      "major_false_pass_count": 2,
+      "reviewed_outcome_counts": {
+        "improved": 0,
+        "same": 5,
+        "worse": 0
+      },
+      "selected": 5,
+      "successful_correction": {
+        "eligible": 2,
+        "improved": 0,
+        "rate_pct": 0.0
+      },
+      "unscorable": 0
+    },
+    "agent_rag": {
+      "agent_judgment": {
+        "accuracy_pct": 60.0,
+        "confusion": {
+          "false_negative": 2,
+          "false_positive": 0,
+          "true_negative": 3,
+          "true_positive": 0
+        },
+        "denominator": 5,
+        "revision_recall_pct": 0.0,
+        "unnecessary_revision_rate_pct": 0.0
+      },
+      "ambiguous": 0,
+      "completed": 5,
+      "component_failure_count": 0,
+      "confirmed": 5,
+      "confirmed_error_type_counts": {
+        "entity_value": 0,
+        "fluency_grammar": 0,
+        "meaning": 0,
+        "omission_addition": 2,
+        "other": 0,
+        "term": 0
+      },
+      "confirmed_outcome_counts": {
+        "improved": 0,
+        "same": 5,
+        "worse": 0
+      },
+      "confirmed_primary_error_counts": {
+        "entity_value": 0,
+        "fluency_grammar": 0,
+        "meaning": 0,
+        "omission_addition": 2,
+        "other": 0,
+        "term": 0
+      },
+      "confirmed_severity_counts": {
+        "MAJOR": 2,
+        "MINOR": 0
+      },
+      "major_false_pass_count": 2,
+      "reviewed_outcome_counts": {
+        "improved": 0,
+        "same": 5,
+        "worse": 0
+      },
+      "selected": 5,
+      "successful_correction": {
+        "eligible": 2,
+        "improved": 0,
+        "rate_pct": 0.0
+      },
+      "unscorable": 0
+    }
+  },
+  "overall_metrics": {
+    "agent_judgment": {
+      "accuracy_pct": 60.0,
+      "confusion": {
+        "false_negative": 4,
+        "false_positive": 0,
+        "true_negative": 6,
+        "true_positive": 0
+      },
+      "denominator": 10,
+      "revision_recall_pct": 0.0,
+      "unnecessary_revision_rate_pct": 0.0
+    },
+    "ambiguous": 0,
+    "completed": 10,
+    "component_failure_count": 0,
+    "confirmed": 10,
+    "confirmed_error_type_counts": {
+      "entity_value": 0,
+      "fluency_grammar": 0,
+      "meaning": 0,
+      "omission_addition": 4,
+      "other": 0,
+      "term": 1
+    },
+    "confirmed_outcome_counts": {
+      "improved": 0,
+      "same": 10,
+      "worse": 0
+    },
+    "confirmed_primary_error_counts": {
+      "entity_value": 0,
+      "fluency_grammar": 0,
+      "meaning": 0,
+      "omission_addition": 4,
+      "other": 0,
+      "term": 0
+    },
+    "confirmed_severity_counts": {
+      "MAJOR": 4,
+      "MINOR": 0
+    },
+    "major_false_pass_count": 4,
+    "reviewed_outcome_counts": {
+      "improved": 0,
+      "same": 10,
+      "worse": 0
+    },
+    "selected": 10,
+    "successful_correction": {
+      "eligible": 4,
+      "improved": 0,
+      "rate_pct": 0.0
+    },
+    "unscorable": 0
+  },
+  "partial_representative_sample": true,
+  "provenance": {
+    "artifact_config_sha256": "2a2935ab0c366522aeae3cbbbb7c7e35c1fe96c654b3131bdcca164daaee16b1",
+    "artifact_file": "artifacts/benchmark-429d6c4a-a1b6-4514-bfd3-dab6966c4101.json",
+    "artifact_sha256": "e0f858ca97ff8d0130e016660f037b421cce0b7c5fdb7721a2fae50c319590cf",
+    "dataset_file": "data/evaluation_v1.jsonl",
+    "dataset_id": "evaluation_v1",
+    "dataset_sha256": "cdef83d7a78de9071cb850890c1c408cbf0573e5501a21086026f232501e6650",
+    "reference_review_sha256": "9e5eefc70976104e4e77ee79a1401ea87a511d1f0d25b83ec9a2e6acbeace2ba",
+    "review_csv_sha256": "337e94f38fb54c365244d7c432f035b7444afa08b1b8745dd9e8fe3313b83c5d",
+    "run_id": "429d6c4a-a1b6-4514-bfd3-dab6966c4101",
+    "selection_manifest_sha256": "9e96a2356ecc3554327e339f1c0d6127fa71d7d6a4ae8ee9ac029a5b2dadbfaa",
+    "source_feedback_sha256": "099b40811f3d3c9453c8c33e60f7d163d0ea84d2d529ff986ecdc65458d01e7b"
+  },
+  "quality_claims_allowed": false,
+  "schema_version": 2,
+  "selected_count": 10
+}

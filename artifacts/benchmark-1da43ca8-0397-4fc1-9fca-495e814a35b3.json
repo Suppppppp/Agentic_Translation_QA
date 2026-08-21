@@ -1,0 +1,546 @@
+{
+  "run_id": "1da43ca8-0397-4fc1-9fca-495e814a35b3",
+  "dataset_id": "pilot_v1",
+  "dataset_sha256": "2e72a02efb3e9df6aa3ad27d384c41159dc45ad5e004b93afaab41e620cbcb6e",
+  "config_sha256": "470d5d33934c7ce6069e22876f3d2e7e539b8d3a4976bc0ef02bff8025c1d363",
+  "run_config": {
+    "dataset_id": "pilot_v1",
+    "dataset_sha256": "2e72a02efb3e9df6aa3ad27d384c41159dc45ad5e004b93afaab41e620cbcb6e",
+    "modes": [
+      "baseline",
+      "rag",
+      "agent",
+      "agent_rag"
+    ],
+    "limit": 1,
+    "warmup": false,
+    "model_versions_by_mode": {
+      "baseline": {
+        "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+        "max_retries": "2",
+        "retrieval_top_k": "3"
+      },
+      "rag": {
+        "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+        "max_retries": "2",
+        "retrieval_top_k": "3",
+        "retriever": "ExactFirstHybridGlossaryRetriever"
+      },
+      "agent": {
+        "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+        "max_retries": "2",
+        "retrieval_top_k": "3",
+        "agent": "qwen3:1.7b",
+        "reviser": "qwen3:1.7b"
+      },
+      "agent_rag": {
+        "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+        "max_retries": "2",
+        "retrieval_top_k": "3",
+        "retriever": "ExactFirstHybridGlossaryRetriever",
+        "agent": "qwen3:1.7b",
+        "reviser": "qwen3:1.7b"
+      }
+    }
+  },
+  "modes": [
+    "baseline",
+    "rag",
+    "agent",
+    "agent_rag"
+  ],
+  "unavailable_metrics": {
+    "agent.successful_correction_rate_pct": "requires confirmed manual initial-to-final outcomes paired with a confirmed initial NEEDS_REVISION label",
+    "agent.agent_judgment_accuracy_pct": "requires confirmed manual PASS/NEEDS_REVISION labels",
+    "agent_rag.successful_correction_rate_pct": "requires confirmed manual initial-to-final outcomes paired with a confirmed initial NEEDS_REVISION label",
+    "agent_rag.agent_judgment_accuracy_pct": "requires confirmed manual PASS/NEEDS_REVISION labels"
+  },
+  "metrics_by_mode": {
+    "baseline": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 0.0,
+      "changed_sentence_rate_pct": null,
+      "successful_correction_rate_pct": null,
+      "successful_correction_improved_count": 0,
+      "successful_correction_labeled_count": 0,
+      "mean_latency_ms": 6598.509874893352,
+      "median_latency_ms": 6598.509874893352,
+      "p95_latency_ms": 6598.509874893352,
+      "mean_retry_count": null,
+      "retry_distribution": {},
+      "agent_judgment_labeled_count": 0,
+      "agent_judgment_accuracy_pct": null,
+      "agent_revision_recall_pct": null,
+      "agent_unnecessary_revision_rate_pct": null,
+      "agent_confusion_counts": null,
+      "error_counts": {},
+      "manual_primary_error_counts": {},
+      "manual_error_type_counts": {}
+    },
+    "rag": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 100.0,
+      "changed_sentence_rate_pct": null,
+      "successful_correction_rate_pct": null,
+      "successful_correction_improved_count": 0,
+      "successful_correction_labeled_count": 0,
+      "mean_latency_ms": 2122.78504204005,
+      "median_latency_ms": 2122.78504204005,
+      "p95_latency_ms": 2122.78504204005,
+      "mean_retry_count": null,
+      "retry_distribution": {},
+      "agent_judgment_labeled_count": 0,
+      "agent_judgment_accuracy_pct": null,
+      "agent_revision_recall_pct": null,
+      "agent_unnecessary_revision_rate_pct": null,
+      "agent_confusion_counts": null,
+      "error_counts": {},
+      "manual_primary_error_counts": {},
+      "manual_error_type_counts": {}
+    },
+    "agent": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 0.0,
+      "changed_sentence_rate_pct": 0.0,
+      "successful_correction_rate_pct": null,
+      "successful_correction_improved_count": 0,
+      "successful_correction_labeled_count": 0,
+      "mean_latency_ms": 9649.046041071415,
+      "median_latency_ms": 9649.046041071415,
+      "p95_latency_ms": 9649.046041071415,
+      "mean_retry_count": 0.0,
+      "retry_distribution": {
+        "0": 1
+      },
+      "agent_judgment_labeled_count": 0,
+      "agent_judgment_accuracy_pct": null,
+      "agent_revision_recall_pct": null,
+      "agent_unnecessary_revision_rate_pct": null,
+      "agent_confusion_counts": null,
+      "error_counts": {},
+      "manual_primary_error_counts": {},
+      "manual_error_type_counts": {}
+    },
+    "agent_rag": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 100.0,
+      "changed_sentence_rate_pct": 0.0,
+      "successful_correction_rate_pct": null,
+      "successful_correction_improved_count": 0,
+      "successful_correction_labeled_count": 0,
+      "mean_latency_ms": 7642.166499979794,
+      "median_latency_ms": 7642.166499979794,
+      "p95_latency_ms": 7642.166499979794,
+      "mean_retry_count": 0.0,
+      "retry_distribution": {
+        "0": 1
+      },
+      "agent_judgment_labeled_count": 0,
+      "agent_judgment_accuracy_pct": null,
+      "agent_revision_recall_pct": null,
+      "agent_unnecessary_revision_rate_pct": null,
+      "agent_confusion_counts": null,
+      "error_counts": {},
+      "manual_primary_error_counts": {},
+      "manual_error_type_counts": {}
+    }
+  },
+  "results": [
+    {
+      "case_id": "pilot-001",
+      "mode": "baseline",
+      "response": {
+        "request_id": "f1d710fe-5374-4d41-9d16-acf430ad2971",
+        "mode": "baseline",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team distributes a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Development team distributes a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 6598.473374964669,
+                "revision_ms": 0.0,
+                "judgment_ms": 0.0,
+                "total_ms": 6598.480249987915
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "selection_reason": "only_candidate",
+          "total_latency_ms": 6598.509874893352,
+          "component_call_counts": {
+            "analysis": 0,
+            "retrieval": 0,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 0
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "max_retries": "2",
+            "retrieval_top_k": "3"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-001",
+      "mode": "rag",
+      "response": {
+        "request_id": "173eae35-1b0b-42f2-8b18-a79ad40b5837",
+        "mode": "rag",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team deploys a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+                "domain": null,
+                "key_terms": [],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-deployment",
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "domain": "software",
+                  "match_type": "hybrid",
+                  "score": 0.84960311910568,
+                  "definition": "Releasing software to a target environment",
+                  "accepted_target_variants": [
+                    "deploy",
+                    "deploys",
+                    "deployed",
+                    "deploying"
+                  ],
+                  "replacement_rules": {
+                    "distributes": "deploys",
+                    "distribute": "deploy",
+                    "distributed": "deployed",
+                    "distribution": "deployment"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "retrieval_hit_id": "sw-deployment",
+                  "target_variants": [
+                    "deploy",
+                    "deploys",
+                    "deployed",
+                    "deploying"
+                  ],
+                  "replacement_rules": {
+                    "distributes": "deploys",
+                    "distribute": "deploy",
+                    "distributed": "deployed",
+                    "distribution": "deployment"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Development team deploys a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 1828.4673332236707,
+                "translation_ms": 294.17233378626406,
+                "revision_ms": 0.0,
+                "judgment_ms": 0.0,
+                "total_ms": 2122.735667042434
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "rag_complete",
+          "selection_reason": "only_candidate",
+          "total_latency_ms": 2122.78504204005,
+          "component_call_counts": {
+            "analysis": 0,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 0
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "max_retries": "2",
+            "retrieval_top_k": "3",
+            "retriever": "ExactFirstHybridGlossaryRetriever"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-001",
+      "mode": "agent",
+      "response": {
+        "request_id": "013585c8-d3ef-4629-86be-604e7dbbe618",
+        "mode": "agent",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team distributes a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.7,
+          "error_types": [],
+          "summary": "The translation is mostly accurate but has minor issues with the verb 'distributes' and the term 'operating environment'. The verb should be 'deploy' for better clarity, and 'operating environment' is a specific term that may need refinement.",
+          "confidence": 0.7,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "operating environment",
+            "deploy"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software",
+            "key_terms": [
+              "개발팀",
+              "금요일",
+              "새 버전",
+              "운영 환경",
+              "배포"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Development team distributes a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.7,
+                "error_types": [],
+                "summary": "The translation is mostly accurate but has minor issues with the verb 'distributes' and the term 'operating environment'. The verb should be 'deploy' for better clarity, and 'operating environment' is a specific term that may need refinement.",
+                "confidence": 0.7,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "operating environment",
+                  "deploy"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 2635.3291249834,
+                "retrieval_ms": 0.0,
+                "translation_ms": 294.49183284305036,
+                "revision_ms": 0.0,
+                "judgment_ms": 6719.131000107154,
+                "total_ms": 9648.988000117242
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 9649.046041071415,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 0,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "max_retries": "2",
+            "retrieval_top_k": "3",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-001",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "e8512be9-0532-404e-817c-bcf2752e8db3",
+        "mode": "agent_rag",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team deploys a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The candidate translation accurately captures the source meaning with minor adjustments to terminology.",
+          "confidence": 0.9,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "operating environment",
+            "deployment"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software",
+            "key_terms": [
+              "개발팀",
+              "금요일",
+              "새 버전",
+              "운영 환경",
+              "배포"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+                "domain": "software",
+                "key_terms": [
+                  "개발팀",
+                  "금요일",
+                  "새 버전",
+                  "운영 환경",
+                  "배포"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-deployment",
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "domain": "software",
+                  "match_type": "hybrid",
+                  "score": 0.8485388013808992,
+                  "definition": "Releasing software to a target environment",
+                  "accepted_target_variants": [
+                    "deploy",
+                    "deploys",
+                    "deployed",
+                    "deploying"
+                  ],
+                  "replacement_rules": {
+                    "distributes": "deploys",
+                    "distribute": "deploy",
+                    "distributed": "deployed",
+                    "distribution": "deployment"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "retrieval_hit_id": "sw-deployment",
+                  "target_variants": [
+                    "deploy",
+                    "deploys",
+                    "deployed",
+                    "deploying"
+                  ],
+                  "replacement_rules": {
+                    "distributes": "deploys",
+                    "distribute": "deploy",
+                    "distributed": "deployed",
+                    "distribution": "deployment"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Development team deploys a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The candidate translation accurately captures the source meaning with minor adjustments to terminology.",
+                "confidence": 0.9,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "operating environment",
+                  "deployment"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 699.6986670419574,
+                "retrieval_ms": 23.554624989628792,
+                "translation_ms": 307.5868748128414,
+                "revision_ms": 0.0,
+                "judgment_ms": 6611.234874930233,
+                "total_ms": 7642.133624991402
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 7642.166499979794,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "max_retries": "2",
+            "retrieval_top_k": "3",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    }
+  ]
+}

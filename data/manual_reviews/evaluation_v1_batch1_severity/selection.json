@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "manual_review_schema_version": 2,
+  "batch_id": "evaluation_v1_batch1_severity",
+  "review_kind": "severity_supplement",
+  "supplements_batch_id": "evaluation_v1_batch1",
+  "partial_representative_sample": true,
+  "base_selection_file": "data/manual_reviews/evaluation_v1_batch1/selection.json",
+  "base_selection_sha256": "301848b0097f7ed94ca6403ae3846831e7eb9e6b656f16cb1030f1db65cc0684",
+  "base_review_csv_file": "data/manual_reviews/evaluation_v1_batch1/review_labels.csv",
+  "base_review_csv_sha256": "3c2a8cb87bcbd972f66c40a48d1a455446f9b26f61186c0727e516761d0c62df",
+  "review_template_file": "data/manual_reviews/evaluation_v1_batch1_severity/severity_labels.csv",
+  "review_template_sha256": "bee5b0f50e995fdb0adfa3f8d55ef192833224b22c78c808dca9652a20b381c8",
+  "artifact_file": "artifacts/benchmark-429d6c4a-a1b6-4514-bfd3-dab6966c4101.json",
+  "artifact_sha256": "e0f858ca97ff8d0130e016660f037b421cce0b7c5fdb7721a2fae50c319590cf",
+  "artifact_config_sha256": "2a2935ab0c366522aeae3cbbbb7c7e35c1fe96c654b3131bdcca164daaee16b1",
+  "run_id": "429d6c4a-a1b6-4514-bfd3-dab6966c4101",
+  "dataset_id": "evaluation_v1",
+  "dataset_file": "data/evaluation_v1.jsonl",
+  "dataset_sha256": "cdef83d7a78de9071cb850890c1c408cbf0573e5501a21086026f232501e6650",
+  "reference_review_sha256": "9e5eefc70976104e4e77ee79a1401ea87a511d1f0d25b83ec9a2e6acbeace2ba",
+  "source_feedback_sha256": "099b40811f3d3c9453c8c33e60f7d163d0ea84d2d529ff986ecdc65458d01e7b",
+  "severity_contract": {
+    "allowed_values": [
+      "MAJOR",
+      "MINOR"
+    ],
+    "required_when": "manual_initial_needs_revision=true",
+    "must_be_blank_when": "manual_initial_needs_revision=false",
+    "reviewer_required_when_severity_present": true,
+    "automatic_labels_generated": false
+  },
+  "selected": [
+    {
+      "review_key": "evaluation-v1-004::agent",
+      "case_id": "evaluation-v1-004",
+      "mode": "agent",
+      "selection_reason": "Both modes revised after an initial failed judgment, enabling a paired retry-trace review."
+    },
+    {
+      "review_key": "evaluation-v1-004::agent_rag",
+      "case_id": "evaluation-v1-004",
+      "mode": "agent_rag",
+      "selection_reason": "Both modes revised after an initial failed judgment, enabling a paired retry-trace review."
+    },
+    {
+      "review_key": "evaluation-v1-009::agent",
+      "case_id": "evaluation-v1-009",
+      "mode": "agent",
+      "selection_reason": "Agent revised while agent_rag accepted its initial candidate, providing contrasting retry decisions."
+    },
+    {
+      "review_key": "evaluation-v1-009::agent_rag",
+      "case_id": "evaluation-v1-009",
+      "mode": "agent_rag",
+      "selection_reason": "Agent revised while agent_rag accepted its initial candidate, providing contrasting retry decisions."
+    },
+    {
+      "review_key": "evaluation-v1-019::agent",
+      "case_id": "evaluation-v1-019",
+      "mode": "agent",
+      "selection_reason": "Agent revised while agent_rag stopped after one attempt, providing another mode-decision contrast."
+    },
+    {
+      "review_key": "evaluation-v1-019::agent_rag",
+      "case_id": "evaluation-v1-019",
+      "mode": "agent_rag",
+      "selection_reason": "Agent revised while agent_rag stopped after one attempt, providing another mode-decision contrast."
+    },
+    {
+      "review_key": "evaluation-v1-024::agent",
+      "case_id": "evaluation-v1-024",
+      "mode": "agent",
+      "selection_reason": "Agent completed a retry while agent_rag recorded a component failure with no parsed judgment."
+    },
+    {
+      "review_key": "evaluation-v1-024::agent_rag",
+      "case_id": "evaluation-v1-024",
+      "mode": "agent_rag",
+      "selection_reason": "Agent completed a retry while agent_rag recorded a component failure with no parsed judgment."
+    },
+    {
+      "review_key": "evaluation-v1-027::agent",
+      "case_id": "evaluation-v1-027",
+      "mode": "agent",
+      "selection_reason": "Agent accepted immediately while agent_rag revised, reversing the earlier mode-level retry pattern."
+    },
+    {
+      "review_key": "evaluation-v1-027::agent_rag",
+      "case_id": "evaluation-v1-027",
+      "mode": "agent_rag",
+      "selection_reason": "Agent accepted immediately while agent_rag revised, reversing the earlier mode-level retry pattern."
+    }
+  ]
+}

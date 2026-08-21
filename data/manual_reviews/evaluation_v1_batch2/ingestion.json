@@ -1,0 +1,36 @@
+{
+  "automatic_severity_labels_generated": false,
+  "baseline_csv_file": "data/manual_reviews/evaluation_v1_batch2/review_labels.csv",
+  "baseline_csv_sha256": "b054fc87425e967c71d705e194833286e497c5e981a258ca8fe46f23670e30bb",
+  "batch_id": "evaluation_v1_batch2",
+  "immutable_values_verified": true,
+  "ingest_kind": "full",
+  "ingested_at_utc": "2026-08-20T19:37:19.282188Z",
+  "manual_fields_copied": [
+    "manual_initial_needs_revision",
+    "manual_severity",
+    "manual_primary_error",
+    "manual_error_types",
+    "pairwise_outcome",
+    "review_status",
+    "reviewer",
+    "note"
+  ],
+  "manual_review_schema_version": 2,
+  "output_csv_file": "data/manual_reviews/evaluation_v1_batch2/review_labels_reviewed.csv",
+  "output_csv_sha256": "337e94f38fb54c365244d7c432f035b7444afa08b1b8745dd9e8fe3313b83c5d",
+  "ready_count": 10,
+  "schema_version": 1,
+  "selected_count": 10,
+  "selection_manifest_file": "data/manual_reviews/evaluation_v1_batch2/selection.json",
+  "selection_manifest_sha256": "9e96a2356ecc3554327e339f1c0d6127fa71d7d6a4ae8ee9ac029a5b2dadbfaa",
+  "severity_counts": {
+    "MAJOR": 4,
+    "MINOR": 0
+  },
+  "severity_required_count": 4,
+  "source_range": "A1:U11",
+  "source_sheet": "Review",
+  "source_workbook_file": "outputs/01a02074-03fa-7530-a959-1f4de7b5c360/evaluation_v1_manual_review_batch2_sup_reviewed.xlsx",
+  "source_workbook_sha256": "26fb34a945d88f31b0c06e66d0a1f0fbdb73a2600d6ba1076a7abbdf27084acb"
+}

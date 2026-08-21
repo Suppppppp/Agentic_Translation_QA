@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "batch_id": "evaluation_v1_batch2",
+  "verified_at_utc": "2026-08-20T19:41:14Z",
+  "workflow": {
+    "model_rerun": false,
+    "translation_rerun": false,
+    "benchmark_rerun": false,
+    "offline_scorer_only": true
+  },
+  "completed_review": {
+    "file": "outputs/01a02074-03fa-7530-a959-1f4de7b5c360/evaluation_v1_manual_review_batch2_sup_reviewed.xlsx",
+    "sha256": "26fb34a945d88f31b0c06e66d0a1f0fbdb73a2600d6ba1076a7abbdf27084acb",
+    "source_sheet": "Review",
+    "source_range": "A1:U11",
+    "row_count": 10,
+    "ready_count": 10,
+    "reviewer": "Sup",
+    "reviewer_count": 10,
+    "row_order_verified": true,
+    "immutable_evidence_verified": true,
+    "non_status_formula_count": 0,
+    "formula_error_count": 0
+  },
+  "protected_inputs": {
+    "selection_manifest_sha256": "9e96a2356ecc3554327e339f1c0d6127fa71d7d6a4ae8ee9ac029a5b2dadbfaa",
+    "blank_review_csv_sha256": "b054fc87425e967c71d705e194833286e497c5e981a258ca8fe46f23670e30bb",
+    "blank_review_workbook_sha256": "e54a6f94651d2a1af06bf5c31a9224e5ceea4ad911a9f5b54946dbad08d2a84e",
+    "benchmark_artifact_sha256": "e0f858ca97ff8d0130e016660f037b421cce0b7c5fdb7721a2fae50c319590cf",
+    "dataset_sha256": "cdef83d7a78de9071cb850890c1c408cbf0573e5501a21086026f232501e6650",
+    "reference_review_sha256": "9e5eefc70976104e4e77ee79a1401ea87a511d1f0d25b83ec9a2e6acbeace2ba",
+    "source_feedback_sha256": "099b40811f3d3c9453c8c33e60f7d163d0ea84d2d529ff986ecdc65458d01e7b",
+    "unchanged_after_workflow": true
+  },
+  "generated_outputs": {
+    "review_csv_file": "data/manual_reviews/evaluation_v1_batch2/review_labels_reviewed.csv",
+    "review_csv_sha256": "337e94f38fb54c365244d7c432f035b7444afa08b1b8745dd9e8fe3313b83c5d",
+    "ingestion_file": "data/manual_reviews/evaluation_v1_batch2/ingestion.json",
+    "ingestion_sha256": "80b3b3b58d74bcf2c0507e71158e4cdbea19af2904f0657ae88df7a55d2b61a2",
+    "scores_file": "data/manual_reviews/evaluation_v1_batch2/scores.json",
+    "scores_sha256": "48f53f4c25bf353b10065f4a13ec9dc208ccc03307cbef261e4c737f27f7b0bc"
+  },
+  "actual_metrics": {
+    "confirmed": 10,
+    "scorable": 10,
+    "component_failure_count": 0,
+    "true_positive": 0,
+    "true_negative": 6,
+    "false_positive": 0,
+    "false_negative": 4,
+    "agent_judgment_accuracy_pct": 60.0,
+    "revision_recall_pct": 0.0,
+    "unnecessary_revision_rate_pct": 0.0,
+    "major_count": 4,
+    "minor_count": 0,
+    "major_false_pass_count": 4,
+    "successful_correction_eligible": 4,
+    "successful_correction_improved": 0,
+    "successful_correction_rate_pct": 0.0,
+    "expected_preview_match": true
+  },
+  "tests": {
+    "regression_test_file": "tests/test_manual_review_batch2_result.py",
+    "regression_test_sha256": "63006cde6db1e79ba47b39c1bf505d12e89ab137e31cba4978326e6d44233b33",
+    "targeted": {
+      "passed": 42,
+      "failed": 0
+    },
+    "full_suite": {
+      "passed": 195,
+      "failed": 0,
+      "warnings": 1,
+      "warning_note": "Pre-existing Starlette/httpx deprecation warning only."
+    }
+  },
+  "removed_prior_copy": {
+    "file": "outputs/01a0205c-c18c-71b2-8bcd-dc64888d032b/evaluation_v1_manual_review_batch2_sup_review.xlsx",
+    "sha256_before_removal": "a32b27f5c31cf6fc82719d4f254e89618754a1a2eafeca8dcea30c030ccd1edf",
+    "removed": true,
+    "recoverable_from_workspace": false
+  }
+}

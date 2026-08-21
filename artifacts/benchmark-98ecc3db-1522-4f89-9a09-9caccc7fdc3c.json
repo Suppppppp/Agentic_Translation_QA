@@ -1,0 +1,108 @@
+{
+  "run_id": "98ecc3db-1522-4f89-9a09-9caccc7fdc3c",
+  "dataset_id": "evaluation_v1",
+  "dataset_sha256": "cdef83d7a78de9071cb850890c1c408cbf0573e5501a21086026f232501e6650",
+  "config_sha256": "4e4f50d493a0b8b38b0222228ce83784380f4f8977d3334b94c7999645131bfc",
+  "run_config": {
+    "dataset_id": "evaluation_v1",
+    "dataset_sha256": "cdef83d7a78de9071cb850890c1c408cbf0573e5501a21086026f232501e6650",
+    "modes": [
+      "baseline"
+    ],
+    "limit": 1,
+    "warmup": false,
+    "model_versions_by_mode": {
+      "baseline": {
+        "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+        "max_retries": "2",
+        "retrieval_top_k": "3"
+      }
+    }
+  },
+  "modes": [
+    "baseline"
+  ],
+  "unavailable_metrics": {},
+  "metrics_by_mode": {
+    "baseline": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 100.0,
+      "changed_sentence_rate_pct": null,
+      "successful_correction_rate_pct": null,
+      "successful_correction_improved_count": 0,
+      "successful_correction_labeled_count": 0,
+      "mean_latency_ms": 405.0487498752773,
+      "median_latency_ms": 405.0487498752773,
+      "p95_latency_ms": 405.0487498752773,
+      "mean_retry_count": null,
+      "retry_distribution": {},
+      "agent_judgment_labeled_count": 0,
+      "agent_judgment_accuracy_pct": null,
+      "agent_revision_recall_pct": null,
+      "agent_unnecessary_revision_rate_pct": null,
+      "agent_confusion_counts": null,
+      "error_counts": {},
+      "manual_primary_error_counts": {},
+      "manual_error_type_counts": {}
+    }
+  },
+  "results": [
+    {
+      "case_id": "evaluation-v1-001",
+      "mode": "baseline",
+      "response": {
+        "request_id": "69d4f146-304f-4f0c-90ef-42f1e0419e50",
+        "mode": "baseline",
+        "source_text": "새로고침은 브라우저 캐시를 지우고 서버에서 최신 버전의 페이지를 가져옵니다.",
+        "translation": "Reloading removes the browser cache and imports the latest version of the page from the server.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Reloading removes the browser cache and imports the latest version of the page from the server.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 405.0187920220196,
+                "revision_ms": 0.0,
+                "judgment_ms": 0.0,
+                "total_ms": 405.02341696992517
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "selection_reason": "only_candidate",
+          "total_latency_ms": 405.0487498752773,
+          "component_call_counts": {
+            "analysis": 0,
+            "retrieval": 0,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 0
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "max_retries": "2",
+            "retrieval_top_k": "3"
+          }
+        }
+      }
+    }
+  ]
+}

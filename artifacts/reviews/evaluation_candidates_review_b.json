@@ -1,0 +1,989 @@
+{
+  "review_metadata": {
+    "reviewer_type": "ai_assisted_draft",
+    "human_confirmed": false,
+    "source_file": "artifacts/eda/evaluation_candidates.jsonl",
+    "scope_terms": [
+      "운영 체제",
+      "클라우드 컴퓨팅",
+      "오픈 소스"
+    ],
+    "selection_rule": "Reviewed every candidate whose hit_terms contains at least one scope term.",
+    "glossary_targets": {
+      "운영 체제": "operating system / operating systems / OS",
+      "클라우드 컴퓨팅": "cloud computing",
+      "오픈 소스": "open source / open-source"
+    },
+    "reviewed_row_count": 62,
+    "model_outputs_consulted": false,
+    "review_basis": [
+      "Korean-English reference alignment",
+      "actual software-domain sense",
+      "contextual fit of the glossary target"
+    ],
+    "usage_note": "Draft screening only; every KEEP and AMBIGUOUS row requires human bilingual confirmation before becoming final gold data."
+  },
+  "summary": {
+    "KEEP": 43,
+    "REJECT": 12,
+    "AMBIGUOUS": 7,
+    "recommended_keep_count": 30
+  },
+  "reviews": [
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000011552",
+      "hit_terms": [
+        "서버",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "서버 직접 관리와 클라우드 서비스의 대비가 reference와 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000043703",
+      "hit_terms": [
+        "소프트웨어",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "IaaS의 'as a service'가 한국어에서 '즉 서비스'로 오역되어 정렬이 깨진다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000045496",
+      "hit_terms": [
+        "데이터베이스",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "용어 열거는 대응하지만 O'Created라는 주체의 실제 기술 맥락을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000057683",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "비호환 시스템의 운영 체제·하드웨어·소프트웨어 차이가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000069623",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "확장성이 클라우드 컴퓨팅의 핵심 고려 사항이라는 기술 맥락이 명확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000084324",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "GitHub의 오픈 소스 프로젝트 호스팅 맥락이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000089173",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": false,
+      "reason": "ODS는 문서 형식이며 오픈 소스 오피스 제품군이라는 용어 적용은 부정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000124511",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Google의 기술 투자 분야로서 클라우드 컴퓨팅이 자연스럽게 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000125512",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "IBM의 기술 분야 열거에서 클라우드 컴퓨팅이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127912",
+      "hit_terms": [
+        "소프트웨어",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "클라우드 컴퓨팅과 소프트웨어 개발의 관계가 양 언어에서 일관된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000130165",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": true,
+      "reason": "eMule과 aMule을 혼동한 것으로 보이는 macOS·Linux 지원 설명이라 실제성 기준을 통과하지 못한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000131949",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "확장 가능한 시스템과 클라우드 컴퓨팅의 관계가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000145827",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Audacity의 무료 오픈 소스 오디오 소프트웨어 의미가 명확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000148336",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "재부팅 과정에서 운영 체제를 다시 불러오는 맥락이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000149545",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "크로스 플랫폼과 운영 체제 의미는 맞지만 withoutforth라는 언어의 실제성을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000150210",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Embox가 임베디드용 오픈 소스 소프트웨어 플랫폼이라는 설명이 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000173037",
+      "hit_terms": [
+        "데이터베이스",
+        "운영 체제"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "용어는 대응하지만 정의되지 않은 lig 때문에 실제 소프트웨어 맥락을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000179681",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "영어의 Go 언어가 한국어에서 '고고'로 잘못 옮겨져 reference 정렬이 불완전하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000180802",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Apache의 오픈 소스 사용·수정 가능성 맥락이 자연스럽게 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000188488",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "커널과 운영 체제, 하드웨어·소프트웨어 인터페이스 관계가 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000203527",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Android가 운영 체제라는 제품 열거가 양 언어에서 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000207685",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "RTOS의 스케줄링·선점·인터럽트 처리 특성이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000219368",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "클라우드 서비스 통합 의미는 대응하지만 Overgrid라는 기술의 실제성을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000227701",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "클라우드 보안과 클라우드 컴퓨팅의 관계가 명확하고 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000237555",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "로드 밸런싱의 클라우드 컴퓨팅 활용 맥락이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000249095",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Clang의 오픈 소스 컴파일러 프레임워크 의미가 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000254277",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "용어 열거는 대응하지만 Toscatter라는 기술의 실제성을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000266732",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "베어본 시스템에 운영 체제를 추가하는 맥락이 자연스럽게 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000267500",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "어셈블리어가 운영 체제 개발에 쓰이는 시스템 프로그래밍 맥락이 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000267738",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Microsoft의 혁신 분야로 클라우드 컴퓨팅을 든 문장이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000273268",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "운영 체제 설정에서 언어·시간대·화면을 구성하는 의미가 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000275304",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "확장성이 클라우드 컴퓨팅의 고려 사항이라는 의미가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000288741",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "인터커넥트의 클라우드 컴퓨팅 활용 맥락이 양 언어에서 일관된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000291918",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Bash가 Linux·Unix 계열 운영 체제의 셸이라는 설명이 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000296078",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Deis의 오픈 소스 분산 시스템 플랫폼 맥락이 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000301907",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "RTOS의 메모리·프로세스·입출력 관리 기능이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000309601",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "실시간 운영 체제의 정의와 임베디드 시스템 맥락이 직접 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000309756",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "한국어 주체 '파나베이스'가 영어의 runtime environment와 대응하지 않는다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000320865",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": true,
+      "reason": "pax를 파일 접근 권한 제어 명령으로 설명해 실제 Unix 명령 의미와 맞지 않는다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000327733",
+      "hit_terms": [
+        "데이터베이스",
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "동시성이 데이터베이스와 운영 체제에 쓰이는 기술 맥락이 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000330297",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "한국어 '뮤우'와 영어 Mux가 어긋나고 Mux를 오픈 소스 영상 편집기로 설명한 내용도 부정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000332036",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": true,
+      "reason": "Wynkernel을 Android 기반 Linux 커널 포크로 설명한 기술적 실제성이 확인되지 않는다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000332192",
+      "hit_terms": [
+        "소프트웨어",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "용도 열거는 대응하지만 Vauty라는 기술의 실제 소프트웨어 맥락을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000351923",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Consul의 오픈 소스 서비스 발견·구성 도구 의미가 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000356326",
+      "hit_terms": [
+        "서버",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Ubuntu의 데스크톱·서버·클라우드 활용 맥락이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000356492",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Google의 기술 분야 열거에서 클라우드 컴퓨팅이 자연스럽게 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000365155",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "확장성과 클라우드 컴퓨팅의 관계가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000370963",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "커서 모양이 운영 체제와 프로그램에 따라 달라지는 의미가 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000373885",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "양 언어 모두 반복된 'click'로 의미가 붕괴되어 실제 클라우드 컴퓨팅 문맥이 아니다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000382495",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "한국어 '아스타일러'와 영어 auto styler의 명칭 정렬이 불명확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000383394",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Embox 구성 요소로 실시간 운영 체제를 든 기술 설명이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000386224",
+      "hit_terms": [
+        "소프트웨어",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "외부화가 클라우드·마이크로서비스 개발 맥락에서 쓰인다는 의미가 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000435272",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Arduino의 오픈 소스 하드웨어·소프트웨어 플랫폼 의미가 정확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000436174",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": ".NET의 오픈 소스·무료·크로스 플랫폼 특성이 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000438494",
+      "hit_terms": [
+        "데이터베이스",
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Delphi의 데이터베이스 연결과 클라우드 기능 맥락이 양 언어에서 일관된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000444277",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Android를 운영 체제로 지칭한 제품 열거가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000446568",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "영어의 Rust가 한국어에서 '레스'로 잘못 옮겨져 정렬이 깨진다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000450346",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "데이터센터와 클라우드 컴퓨팅 성장의 관계가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000452500",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "커널이 운영 체제의 핵심이라는 기술 의미가 명확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000462798",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": true,
+      "software_domain_ok": null,
+      "term_sense_ok": true,
+      "reason": "오픈 소스 소프트웨어 의미는 대응하지만 Wemless라는 제품의 실제성을 확인하기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000471716",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "한국어의 snet과 영어의 SDN이 서로 다른 명칭이라 reference 정렬이 깨진다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000485419",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "어셈블러와 운영 체제·드라이버 저수준 개발 맥락이 정확히 대응한다."
+    }
+  ],
+  "recommended_keep": [
+    {
+      "priority": 1,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000309601",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "RTOS 정의와 운영 체제 용어가 직접 대응하는 대표 사례"
+    },
+    {
+      "priority": 2,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000207685",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "RTOS의 실시간 스케줄링 특성이 구체적인 운영 체제 사례"
+    },
+    {
+      "priority": 3,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000188488",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "reason": "커널·운영 체제·하드웨어·소프트웨어 관계가 명확한 사례"
+    },
+    {
+      "priority": 4,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000227701",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "클라우드 보안과 클라우드 컴퓨팅의 관계가 분명한 사례"
+    },
+    {
+      "priority": 5,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000249095",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "reason": "Clang의 오픈 소스 컴파일러 의미가 정확한 사례"
+    },
+    {
+      "priority": 6,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000435272",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "reason": "Arduino의 오픈 소스 하드웨어·소프트웨어 맥락이 뚜렷한 사례"
+    },
+    {
+      "priority": 7,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000084324",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "reason": "GitHub의 오픈 소스 프로젝트 호스팅 맥락이 명확한 사례"
+    },
+    {
+      "priority": 8,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000291918",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "Bash와 Linux·Unix 계열 운영 체제 관계가 직접적인 사례"
+    },
+    {
+      "priority": 9,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000237555",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "로드 밸런싱의 클라우드 활용 맥락이 구체적인 사례"
+    },
+    {
+      "priority": 10,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000267500",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "어셈블리어와 운영 체제 시스템 프로그래밍 관계가 명확한 사례"
+    },
+    {
+      "priority": 11,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000301907",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "RTOS의 핵심 운영 체제 기능이 구체적으로 열거된 사례"
+    },
+    {
+      "priority": 12,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000351923",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "reason": "Consul의 오픈 소스 서비스 발견 도구 의미가 정확한 사례"
+    },
+    {
+      "priority": 13,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000150210",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "reason": "Embox의 임베디드 오픈 소스 플랫폼 의미가 직접적인 사례"
+    },
+    {
+      "priority": 14,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000436174",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "reason": ".NET의 오픈 소스 개발 플랫폼 의미가 명확한 사례"
+    },
+    {
+      "priority": 15,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000148336",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "재부팅과 운영 체제 재로딩 관계가 자연스러운 사례"
+    },
+    {
+      "priority": 16,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000450346",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "데이터센터와 클라우드 컴퓨팅 성장 관계가 명확한 사례"
+    },
+    {
+      "priority": 17,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127912",
+      "hit_terms": [
+        "소프트웨어",
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "클라우드 컴퓨팅과 소프트웨어 개발의 관계가 직접적인 사례"
+    },
+    {
+      "priority": 18,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000327733",
+      "hit_terms": [
+        "데이터베이스",
+        "운영 체제"
+      ],
+      "reason": "동시성의 데이터베이스·운영 체제 활용 맥락이 구체적인 사례"
+    },
+    {
+      "priority": 19,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000485419",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "reason": "어셈블러와 운영 체제 저수준 개발 맥락이 정확한 사례"
+    },
+    {
+      "priority": 20,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000273268",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "운영 체제 설정의 실제 사용자 맥락이 명확한 사례"
+    },
+    {
+      "priority": 21,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000383394",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "Embox의 실시간 운영 체제 구성 요소가 구체적인 사례"
+    },
+    {
+      "priority": 22,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000356326",
+      "hit_terms": [
+        "서버",
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "Ubuntu의 데스크톱·서버·클라우드 활용을 함께 다룬 사례"
+    },
+    {
+      "priority": 23,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000057683",
+      "hit_terms": [
+        "소프트웨어",
+        "운영 체제"
+      ],
+      "reason": "운영 체제·하드웨어·소프트웨어 호환성 관계가 명확한 사례"
+    },
+    {
+      "priority": 24,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000180802",
+      "hit_terms": [
+        "오픈 소스"
+      ],
+      "reason": "Apache의 오픈 소스 사용·수정 의미가 자연스러운 사례"
+    },
+    {
+      "priority": 25,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000266732",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "베어본 시스템에 운영 체제를 추가하는 맥락이 실제적인 사례"
+    },
+    {
+      "priority": 26,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000438494",
+      "hit_terms": [
+        "데이터베이스",
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "Delphi의 데이터베이스·클라우드 기능이 함께 등장하는 사례"
+    },
+    {
+      "priority": 27,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000386224",
+      "hit_terms": [
+        "소프트웨어",
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "클라우드와 마이크로서비스 개발 패러다임을 연결한 사례"
+    },
+    {
+      "priority": 28,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000069623",
+      "hit_terms": [
+        "클라우드 컴퓨팅"
+      ],
+      "reason": "클라우드 컴퓨팅의 확장성 고려 사항이 명확한 사례"
+    },
+    {
+      "priority": 29,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000145827",
+      "hit_terms": [
+        "소프트웨어",
+        "오픈 소스"
+      ],
+      "reason": "Audacity의 오픈 소스 오디오 소프트웨어 의미가 직접적인 사례"
+    },
+    {
+      "priority": 30,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000203527",
+      "hit_terms": [
+        "운영 체제"
+      ],
+      "reason": "Android가 운영 체제라는 제품 맥락이 정확한 사례"
+    }
+  ]
+}

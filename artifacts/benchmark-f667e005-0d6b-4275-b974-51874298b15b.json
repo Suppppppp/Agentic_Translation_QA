@@ -1,0 +1,138 @@
+{
+  "run_id": "f667e005-0d6b-4275-b974-51874298b15b",
+  "dataset_id": "pilot_v1",
+  "modes": [
+    "baseline",
+    "rag"
+  ],
+  "metrics_by_mode": {
+    "baseline": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 0.0,
+      "changed_sentence_rate_pct": null,
+      "successful_correction_rate_pct": null,
+      "mean_latency_ms": 3923.0924581643194,
+      "mean_retry_count": null,
+      "retry_distribution": {},
+      "agent_judgment_accuracy_pct": null,
+      "error_counts": {}
+    },
+    "rag": {
+      "sample_count": 1,
+      "terminology_accuracy_pct": 0.0,
+      "changed_sentence_rate_pct": null,
+      "successful_correction_rate_pct": null,
+      "mean_latency_ms": 1780.5010001175106,
+      "mean_retry_count": null,
+      "retry_distribution": {},
+      "agent_judgment_accuracy_pct": null,
+      "error_counts": {}
+    }
+  },
+  "results": [
+    {
+      "case_id": "pilot-001",
+      "mode": "baseline",
+      "response": {
+        "request_id": "c98e7fec-b591-4629-a212-965bdba991e6",
+        "mode": "baseline",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team distributes a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Development team distributes a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 3923.044083174318,
+                "judgment_ms": 0.0,
+                "total_ms": 3923.0463749263436
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 3923.0924581643194,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en",
+            "agent": "rule-based-term-checker"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-001",
+      "mode": "rag",
+      "response": {
+        "request_id": "9b37b189-38ec-4c52-969d-4b293d1c2554",
+        "mode": "rag",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team distributes a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": {
+                "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+                "domain": null,
+                "key_terms": [],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-deployment",
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Releasing software to a target environment"
+                }
+              ],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Development team distributes a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.03487500362098217,
+                "translation_ms": 1780.4105831310153,
+                "judgment_ms": 0.0,
+                "total_ms": 1780.4612501058728
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "constraint_fallback",
+          "total_latency_ms": 1780.5010001175106,
+          "warnings": [
+            "lexical constraints produced a degenerate candidate; using an unconstrained fallback is required"
+          ],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en",
+            "agent": "rule-based-term-checker"
+          }
+        }
+      }
+    }
+  ]
+}

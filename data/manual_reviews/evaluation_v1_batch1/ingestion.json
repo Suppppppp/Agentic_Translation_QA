@@ -1,0 +1,36 @@
+{
+  "agent_judgment_scorable_count": 9,
+  "batch_id": "evaluation_v1_batch1",
+  "component_failure_count": 1,
+  "component_failure_keys": [
+    "evaluation-v1-024::agent_rag"
+  ],
+  "confirmed_count": 10,
+  "immutable_evidence_verified": true,
+  "ingested_at_utc": "2026-08-20T16:11:46.168624Z",
+  "manual_fields_copied": [
+    "manual_initial_needs_revision",
+    "manual_primary_error",
+    "manual_error_types",
+    "pairwise_outcome",
+    "review_status",
+    "reviewer",
+    "note"
+  ],
+  "ready_count": 10,
+  "review_csv_sha256_after": "3c2a8cb87bcbd972f66c40a48d1a455446f9b26f61186c0727e516761d0c62df",
+  "review_csv_sha256_before": "5f9e554e1702d58ae7fa498fc0c109d1c09139a8dc94211bf0abc09974543d26",
+  "reviewer": "Sup",
+  "schema_version": 1,
+  "selected_count": 10,
+  "selection_manifest_sha256": "301848b0097f7ed94ca6403ae3846831e7eb9e6b656f16cb1030f1db65cc0684",
+  "source_range": "A2:T11",
+  "source_sheet": "Review",
+  "source_workbook_file": "outputs/01a01f71-e0d2-7250-b573-d6bc5d0b1c59/evaluation_v1_manual_review_batch1_sup_reviewed.xlsx",
+  "source_workbook_sha256": "f61a06f1d7cefd0183b250040eb47b08a6c4f24d4e28d8445cdac8b2f3d438c5",
+  "workbook_score_preview": {
+    "agent_judgment_accuracy_pct": 66.66666666666666,
+    "correction_improved": 5,
+    "successful_correction_rate_pct": 50.0
+  }
+}

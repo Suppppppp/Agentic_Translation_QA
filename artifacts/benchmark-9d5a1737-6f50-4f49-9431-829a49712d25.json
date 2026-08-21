@@ -1,0 +1,1748 @@
+{
+  "run_id": "9d5a1737-6f50-4f49-9431-829a49712d25",
+  "dataset_id": "pilot_v1",
+  "modes": [
+    "agent_rag"
+  ],
+  "metrics_by_mode": {
+    "agent_rag": {
+      "sample_count": 12,
+      "terminology_accuracy_pct": 100.0,
+      "changed_sentence_rate_pct": 16.666666666666664,
+      "successful_correction_rate_pct": null,
+      "mean_latency_ms": 16980.38364574313,
+      "median_latency_ms": 13081.63637504913,
+      "p95_latency_ms": 37911.10345791094,
+      "mean_retry_count": 0.16666666666666666,
+      "retry_distribution": {
+        "0": 10,
+        "1": 2
+      },
+      "agent_judgment_accuracy_pct": null,
+      "error_counts": {}
+    }
+  },
+  "results": [
+    {
+      "case_id": "pilot-001",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "98794fcc-c6d4-4cdf-8cda-7136d4450dbc",
+        "mode": "agent_rag",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team deploys a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The candidate translation accurately captures the source meaning with minor adjustments to terminology.",
+          "confidence": 0.9,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "operating environment",
+            "deployment"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software development",
+            "key_terms": [
+              "개발팀",
+              "금요일",
+              "새 버전",
+              "운영 환경"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+                "domain": "software development",
+                "key_terms": [
+                  "개발팀",
+                  "금요일",
+                  "새 버전",
+                  "운영 환경"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-deployment",
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Releasing software to a target environment",
+                  "accepted_target_variants": [
+                    "deploy",
+                    "deploys",
+                    "deployed",
+                    "deploying"
+                  ],
+                  "replacement_rules": {
+                    "distributes": "deploys",
+                    "distribute": "deploy",
+                    "distributed": "deployed",
+                    "distribution": "deployment"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "배포",
+                  "target_term": "deployment",
+                  "retrieval_hit_id": "sw-deployment",
+                  "target_variants": [
+                    "deploy",
+                    "deploys",
+                    "deployed",
+                    "deploying"
+                  ],
+                  "replacement_rules": {
+                    "distributes": "deploys",
+                    "distribute": "deploy",
+                    "distributed": "deployed",
+                    "distribution": "deployment"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Development team deploys a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The candidate translation accurately captures the source meaning with minor adjustments to terminology.",
+                "confidence": 0.9,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "operating environment",
+                  "deployment"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 4742.2386249527335,
+                "retrieval_ms": 60.6541249435395,
+                "translation_ms": 490.61162513680756,
+                "revision_ms": 0.0,
+                "judgment_ms": 7041.4967918768525,
+                "total_ms": 12335.724541917443
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 12336.201041936874,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-002",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "5d8a7b9c-516d-41ed-8e39-b07a4dfd32b9",
+        "mode": "agent_rag",
+        "source_text": "설정이 바뀌면 오래된 캐시를 즉시 삭제해야 한다.",
+        "translation": "If the settings change, the old cache must be deleted immediately.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.8,
+          "error_types": [],
+          "summary": "The translation is accurate but slightly formal, with minor adjustments for conciseness.",
+          "confidence": 0.8,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "cache",
+            "settings"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software",
+            "key_terms": [
+              "설정",
+              "바뀌면",
+              "오래된 캐시",
+              "즉시 삭제해야 한다"
+            ],
+            "confidence": 0.8
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "설정이 바뀌면 오래된 캐시를 즉시 삭제해야 한다.",
+                "domain": "software",
+                "key_terms": [
+                  "설정",
+                  "바뀌면",
+                  "오래된 캐시",
+                  "즉시 삭제해야 한다"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-cache",
+                  "source_term": "캐시",
+                  "target_term": "cache",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Temporary storage used to speed up repeated access",
+                  "accepted_target_variants": [
+                    "caching",
+                    "cached"
+                  ],
+                  "replacement_rules": {
+                    "cachet": "cache"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "캐시",
+                  "target_term": "cache",
+                  "retrieval_hit_id": "sw-cache",
+                  "target_variants": [
+                    "caching",
+                    "cached"
+                  ],
+                  "replacement_rules": {
+                    "cachet": "cache"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "If the settings change, the old cache must be deleted immediately.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.8,
+                "error_types": [],
+                "summary": "The translation is accurate but slightly formal, with minor adjustments for conciseness.",
+                "confidence": 0.8,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "cache",
+                  "settings"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 4498.620457947254,
+                "retrieval_ms": 28.147875098511577,
+                "translation_ms": 450.66316705197096,
+                "revision_ms": 0.0,
+                "judgment_ms": 6639.349999837577,
+                "total_ms": 11616.925375070423
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 11617.102666990831,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-003",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "654aafab-b6d9-4abf-9385-b95e29b7a6f4",
+        "mode": "agent_rag",
+        "source_text": "주 서버가 중단되면 자동 장애 조치가 대기 서버를 활성화한다.",
+        "translation": "When the main server is suspended, automatic failover activates the waiting server.",
+        "retry_count": 1,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The candidate translation accurately reflects the source sentence, correctly using 'failover' for '장애 조치' and 'waiting server' for '대기 서버'.",
+          "confidence": 1.0,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "failover",
+            "waiting server"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "IT",
+            "key_terms": [
+              "주 서버",
+              "중단",
+              "자동 장애 조치",
+              "대기 서버",
+              "활성화한다"
+            ],
+            "confidence": 0.8
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "주 서버가 중단되면 자동 장애 조치가 대기 서버를 활성화한다.",
+                "domain": "IT",
+                "key_terms": [
+                  "주 서버",
+                  "중단",
+                  "자동 장애 조치",
+                  "대기 서버",
+                  "활성화한다"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-failover",
+                  "source_term": "장애 조치",
+                  "target_term": "failover",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Switching to a standby system after a failure",
+                  "accepted_target_variants": [
+                    "fail over"
+                  ],
+                  "replacement_rules": {
+                    "automatic disability measures": "automatic failover",
+                    "disability measures": "failover",
+                    "failure action": "failover"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "장애 조치",
+                  "target_term": "failover",
+                  "retrieval_hit_id": "sw-failover",
+                  "target_variants": [
+                    "fail over"
+                  ],
+                  "replacement_rules": {
+                    "automatic disability measures": "automatic failover",
+                    "disability measures": "failover",
+                    "failure action": "failover"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "When the main server is suspended, automatic failover activate the waiting server.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": false,
+                "quality_score": 0.7,
+                "error_types": [
+                  "fluency_grammar"
+                ],
+                "summary": "The candidate translation uses 'activate' (singular) for a general action, which is incorrect. The verb should be 'activates' (plural).",
+                "confidence": 0.7,
+                "next_action": "revise",
+                "suggested_query_terms": [
+                  "failover",
+                  "server activation"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 8394.53945797868,
+                "retrieval_ms": 37.0562500320375,
+                "translation_ms": 490.6748328357935,
+                "revision_ms": 0.0,
+                "judgment_ms": 12197.90670904331,
+                "total_ms": 21120.324416086078
+              }
+            },
+            {
+              "attempt_index": 1,
+              "candidate_origin": "agent_revision",
+              "parent_attempt_index": 0,
+              "requested_action": "revise",
+              "applied_action": "revise",
+              "retrieval_query": null,
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-failover",
+                  "source_term": "장애 조치",
+                  "target_term": "failover",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Switching to a standby system after a failure",
+                  "accepted_target_variants": [
+                    "fail over"
+                  ],
+                  "replacement_rules": {
+                    "automatic disability measures": "automatic failover",
+                    "disability measures": "failover",
+                    "failure action": "failover"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "장애 조치",
+                  "target_term": "failover",
+                  "retrieval_hit_id": "sw-failover",
+                  "target_variants": [
+                    "fail over"
+                  ],
+                  "replacement_rules": {
+                    "automatic disability measures": "automatic failover",
+                    "disability measures": "failover",
+                    "failure action": "failover"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "When the main server is suspended, automatic failover activates the waiting server.",
+                "model_id": "qwen3:1.7b"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The candidate translation accurately reflects the source sentence, correctly using 'failover' for '장애 조치' and 'waiting server' for '대기 서버'.",
+                "confidence": 1.0,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "failover",
+                  "waiting server"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 0.0,
+                "revision_ms": 7648.926082998514,
+                "judgment_ms": 9141.3991660811,
+                "total_ms": 16790.458582807332
+              }
+            }
+          ],
+          "final_attempt_index": 1,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 37911.10345791094,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 1,
+            "judgment": 2
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-004",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "747664ae-6abc-475d-94ac-d02bda5d3e31",
+        "mode": "agent_rag",
+        "source_text": "부하 분산은 여러 서버에 요청을 고르게 전달한다.",
+        "translation": "Load balancing sends requests to multiple servers.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.7,
+          "error_types": [],
+          "summary": "The translation is mostly accurate but has a minor issue with the definition of 'load balancing' in the glossary.",
+          "confidence": 0.7,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "load balancing",
+            "distribution of traffic"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "Computer Science",
+            "key_terms": [
+              "부하 분산",
+              "서버",
+              "요청",
+              "전달"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "부하 분산은 여러 서버에 요청을 고르게 전달한다.",
+                "domain": "Computer Science",
+                "key_terms": [
+                  "부하 분산",
+                  "서버",
+                  "요청",
+                  "전달"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-load-balancing",
+                  "source_term": "부하 분산",
+                  "target_term": "load balancing",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Distributing traffic across multiple computing resources",
+                  "accepted_target_variants": [
+                    "load balancer"
+                  ],
+                  "replacement_rules": {
+                    "load dispersal": "load balancing",
+                    "load distribution": "load balancing",
+                    "men's distribution": "load balancing"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "부하 분산",
+                  "target_term": "load balancing",
+                  "retrieval_hit_id": "sw-load-balancing",
+                  "target_variants": [
+                    "load balancer"
+                  ],
+                  "replacement_rules": {
+                    "load dispersal": "load balancing",
+                    "load distribution": "load balancing",
+                    "men's distribution": "load balancing"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Load balancing sends requests to multiple servers.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.7,
+                "error_types": [],
+                "summary": "The translation is mostly accurate but has a minor issue with the definition of 'load balancing' in the glossary.",
+                "confidence": 0.7,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "load balancing",
+                  "distribution of traffic"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 6886.977375019342,
+                "retrieval_ms": 20.84754197858274,
+                "translation_ms": 397.3230828996748,
+                "revision_ms": 0.0,
+                "judgment_ms": 7137.879499932751,
+                "total_ms": 14443.175040883943
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 14443.397416034713,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-005",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "18d8fa5b-8ed9-42cd-8802-aeb96704c6fd",
+        "mode": "agent_rag",
+        "source_text": "지속적 통합 파이프라인은 커밋마다 테스트를 실행한다.",
+        "translation": "The continuous integration pipeline will run a test every time you commit.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 1.0,
+          "error_types": [],
+          "summary": "The translation accurately reflects the source text with appropriate terminology and maintains fluency.",
+          "confidence": 1.0,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "continuous integration",
+            "commit"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software development",
+            "key_terms": [
+              "지속적 통합 파이프라인",
+              "테스트"
+            ],
+            "confidence": 1.0
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "지속적 통합 파이프라인은 커밋마다 테스트를 실행한다.",
+                "domain": "software development",
+                "key_terms": [
+                  "지속적 통합 파이프라인",
+                  "테스트"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-ci",
+                  "source_term": "지속적 통합",
+                  "target_term": "continuous integration",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Frequently merging and automatically validating code changes",
+                  "accepted_target_variants": [
+                    "CI"
+                  ],
+                  "replacement_rules": {
+                    "persistent integration": "continuous integration",
+                    "persistent integrated": "continuous integration"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "지속적 통합",
+                  "target_term": "continuous integration",
+                  "retrieval_hit_id": "sw-ci",
+                  "target_variants": [
+                    "CI"
+                  ],
+                  "replacement_rules": {
+                    "persistent integration": "continuous integration",
+                    "persistent integrated": "continuous integration"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "The continuous integration pipeline will run a test every time you commit.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 1.0,
+                "error_types": [],
+                "summary": "The translation accurately reflects the source text with appropriate terminology and maintains fluency.",
+                "confidence": 1.0,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "continuous integration",
+                  "commit"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 5039.4923749845475,
+                "retrieval_ms": 38.821374997496605,
+                "translation_ms": 450.1081248745322,
+                "revision_ms": 0.0,
+                "judgment_ms": 6920.602875063196,
+                "total_ms": 12449.100625002757
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 12449.373167008162,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-006",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "d0cf74c7-79a4-426a-981f-1a520a1ae975",
+        "mode": "agent_rag",
+        "source_text": "릴리스 전에 전체 회귀 테스트를 다시 실행하자.",
+        "translation": "Let's run the full regression test again before release.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The translation accurately conveys the original intent with minor adjustments to enhance naturalness.",
+          "confidence": 0.9,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "regression testing",
+            "regression test",
+            "release"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software testing",
+            "key_terms": [
+              "릴리스",
+              "전체 회귀 테스트",
+              "재실행하자"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "릴리스 전에 전체 회귀 테스트를 다시 실행하자.",
+                "domain": "software testing",
+                "key_terms": [
+                  "릴리스",
+                  "전체 회귀 테스트",
+                  "재실행하자"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-regression-test",
+                  "source_term": "회귀 테스트",
+                  "target_term": "regression testing",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Testing that existing behavior still works after a change",
+                  "accepted_target_variants": [
+                    "regression test",
+                    "regression tests"
+                  ],
+                  "replacement_rules": {
+                    "return tests": "regression tests",
+                    "return test": "regression test"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "회귀 테스트",
+                  "target_term": "regression testing",
+                  "retrieval_hit_id": "sw-regression-test",
+                  "target_variants": [
+                    "regression test",
+                    "regression tests"
+                  ],
+                  "replacement_rules": {
+                    "return tests": "regression tests",
+                    "return test": "regression test"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Let's run the full regression test again before release.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The translation accurately conveys the original intent with minor adjustments to enhance naturalness.",
+                "confidence": 0.9,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "regression testing",
+                  "regression test",
+                  "release"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 4850.550499977544,
+                "retrieval_ms": 27.60729193687439,
+                "translation_ms": 443.70983401313424,
+                "revision_ms": 0.0,
+                "judgment_ms": 6115.958417067304,
+                "total_ms": 11437.89454200305
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 11439.719000132754,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-007",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "15070602-b075-456b-8761-2e343a029758",
+        "mode": "agent_rag",
+        "source_text": "오류율이 증가하면 이전 버전으로 롤백한다.",
+        "translation": "If the error rate increases, roll back to the previous version.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The translation accurately captures the original meaning with proper use of the term 'roll back' and appropriate grammar.",
+          "confidence": 0.98,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "error rate",
+            "roll back"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software",
+            "key_terms": [
+              "오류율",
+              "증가",
+              "이전 버전",
+              "롤백"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "오류율이 증가하면 이전 버전으로 롤백한다.",
+                "domain": "software",
+                "key_terms": [
+                  "오류율",
+                  "증가",
+                  "이전 버전",
+                  "롤백"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-rollback",
+                  "source_term": "롤백",
+                  "target_term": "rollback",
+                  "domain": "software",
+                  "match_type": "hybrid",
+                  "score": 0.8308985191463941,
+                  "definition": "Restoring a previously known software version or state",
+                  "accepted_target_variants": [
+                    "roll back",
+                    "rolls back",
+                    "rolled back"
+                  ],
+                  "replacement_rules": {
+                    "roll to": "roll back to"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "롤백",
+                  "target_term": "rollback",
+                  "retrieval_hit_id": "sw-rollback",
+                  "target_variants": [
+                    "roll back",
+                    "rolls back",
+                    "rolled back"
+                  ],
+                  "replacement_rules": {
+                    "roll to": "roll back to"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "If the error rate increases, roll back to the previous version.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The translation accurately captures the original meaning with proper use of the term 'roll back' and appropriate grammar.",
+                "confidence": 0.98,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "error rate",
+                  "roll back"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 4730.716291116551,
+                "retrieval_ms": 25.866208132356405,
+                "translation_ms": 412.27683308534324,
+                "revision_ms": 0.0,
+                "judgment_ms": 6007.589958840981,
+                "total_ms": 11176.663083024323
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 11176.775499945506,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-008",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "fcd0108b-d3cd-4490-8972-5017e3ca0b04",
+        "mode": "agent_rag",
+        "source_text": "장시간 실행 후 메모리 누수가 발견되었다.",
+        "translation": "Memory leaks were found after long hours of running.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 1.0,
+          "error_types": [],
+          "summary": "The translation accurately conveys the meaning of the source text with appropriate terminology and natural phrasing.",
+          "confidence": 1.0,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "memory leak",
+            "memory leaks",
+            "long hours of running"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "software",
+            "key_terms": [
+              "장시간 실행",
+              "메모리 누수",
+              "발견되었다"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "장시간 실행 후 메모리 누수가 발견되었다.",
+                "domain": "software",
+                "key_terms": [
+                  "장시간 실행",
+                  "메모리 누수",
+                  "발견되었다"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-memory-leak",
+                  "source_term": "메모리 누수",
+                  "target_term": "memory leak",
+                  "domain": "software",
+                  "match_type": "hybrid",
+                  "score": 0.8683262067776903,
+                  "definition": "Memory that is no longer needed but is not released",
+                  "accepted_target_variants": [
+                    "memory leaks",
+                    "memory leakage"
+                  ],
+                  "replacement_rules": {}
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "메모리 누수",
+                  "target_term": "memory leak",
+                  "retrieval_hit_id": "sw-memory-leak",
+                  "target_variants": [
+                    "memory leaks",
+                    "memory leakage"
+                  ],
+                  "replacement_rules": {}
+                }
+              ],
+              "candidate": {
+                "text": "Memory leaks were found after long hours of running.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 1.0,
+                "error_types": [],
+                "summary": "The translation accurately conveys the meaning of the source text with appropriate terminology and natural phrasing.",
+                "confidence": 1.0,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "memory leak",
+                  "memory leaks",
+                  "long hours of running"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 5749.1691671311855,
+                "retrieval_ms": 29.030916979536414,
+                "translation_ms": 369.2657919600606,
+                "revision_ms": 0.0,
+                "judgment_ms": 7056.966207921505,
+                "total_ms": 13204.628250095993
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 13204.767666989937,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-009",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "8478c8b1-a44d-4c96-9638-1da41e0f32db",
+        "mode": "agent_rag",
+        "source_text": "관리자 화면에는 역할 기반 접근 제어를 적용한다.",
+        "translation": "A role-based access control is used for the manager screen.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The translation accurately captures the original Korean text with correct technical terms and sentence structure.",
+          "confidence": 0.98,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "role-based access control",
+            "manager screen"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "Information Security",
+            "key_terms": [
+              "관리자 화면",
+              "역할 기반 접근 제어"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "관리자 화면에는 역할 기반 접근 제어를 적용한다.",
+                "domain": "Information Security",
+                "key_terms": [
+                  "관리자 화면",
+                  "역할 기반 접근 제어"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-access-control",
+                  "source_term": "접근 제어",
+                  "target_term": "access control",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Rules that determine who can access a resource",
+                  "accepted_target_variants": [
+                    "access controls"
+                  ],
+                  "replacement_rules": {}
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "접근 제어",
+                  "target_term": "access control",
+                  "retrieval_hit_id": "sw-access-control",
+                  "target_variants": [
+                    "access controls"
+                  ],
+                  "replacement_rules": {}
+                }
+              ],
+              "candidate": {
+                "text": "A role-based access control is used for the manager screen.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The translation accurately captures the original Korean text with correct technical terms and sentence structure.",
+                "confidence": 0.98,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "role-based access control",
+                  "manager screen"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 7069.252333138138,
+                "retrieval_ms": 31.221874989569187,
+                "translation_ms": 610.6921248137951,
+                "revision_ms": 0.0,
+                "judgment_ms": 6337.604792090133,
+                "total_ms": 14048.959832871333
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 14049.487332813442,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-010",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "488c39ea-2b60-4ebb-ab6c-16065cc4a335",
+        "mode": "agent_rag",
+        "source_text": "벡터 검색은 의미가 비슷한 문서를 찾는 데 사용된다.",
+        "translation": "The vector search is used to find similar documents with meaning.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.85,
+          "error_types": [],
+          "summary": "The translation is mostly accurate but has a minor redundancy in the phrase 'with meaning.' The candidate uses 'similar documents with meaning' instead of 'similar documents with meaning' (though the latter is redundant).",
+          "confidence": 0.8,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "vector search",
+            "similar documents"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "Information Retrieval",
+            "key_terms": [
+              "벡터 검색",
+              "의미가 비슷한 문서"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "벡터 검색은 의미가 비슷한 문서를 찾는 데 사용된다.",
+                "domain": "Information Retrieval",
+                "key_terms": [
+                  "벡터 검색",
+                  "의미가 비슷한 문서"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-vector-search",
+                  "source_term": "벡터 검색",
+                  "target_term": "vector search",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Retrieval based on similarity between numerical embeddings",
+                  "accepted_target_variants": [
+                    "vector retrieval",
+                    "vector-based search"
+                  ],
+                  "replacement_rules": {}
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "벡터 검색",
+                  "target_term": "vector search",
+                  "retrieval_hit_id": "sw-vector-search",
+                  "target_variants": [
+                    "vector retrieval",
+                    "vector-based search"
+                  ],
+                  "replacement_rules": {}
+                }
+              ],
+              "candidate": {
+                "text": "The vector search is used to find similar documents with meaning.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.85,
+                "error_types": [],
+                "summary": "The translation is mostly accurate but has a minor redundancy in the phrase 'with meaning.' The candidate uses 'similar documents with meaning' instead of 'similar documents with meaning' (though the latter is redundant).",
+                "confidence": 0.8,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "vector search",
+                  "similar documents"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 11237.859207903966,
+                "retrieval_ms": 68.7739581335336,
+                "translation_ms": 445.0997090898454,
+                "revision_ms": 0.0,
+                "judgment_ms": 13238.505166955292,
+                "total_ms": 24990.460166009143
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 24990.607208106667,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-011",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "aaf7bbcb-02d8-4513-9fc6-a96471e4adb9",
+        "mode": "agent_rag",
+        "source_text": "캐시와 부하 분산을 함께 사용해 응답 지연을 줄였다.",
+        "translation": "Cache and load balancing have been used to reduce response delays.",
+        "retry_count": 1,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The translation accurately reflects the source text with correct terminology and grammatical structure.",
+          "confidence": 1.0,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "cache",
+            "load balancing",
+            "response delays"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "computer science",
+            "key_terms": [
+              "캐시",
+              "부하 분산",
+              "응답 지연",
+              "사용해"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "캐시와 부하 분산을 함께 사용해 응답 지연을 줄였다.",
+                "domain": "computer science",
+                "key_terms": [
+                  "캐시",
+                  "부하 분산",
+                  "응답 지연",
+                  "사용해"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-cache",
+                  "source_term": "캐시",
+                  "target_term": "cache",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Temporary storage used to speed up repeated access",
+                  "accepted_target_variants": [
+                    "caching",
+                    "cached"
+                  ],
+                  "replacement_rules": {
+                    "cachet": "cache"
+                  }
+                },
+                {
+                  "term_id": "sw-load-balancing",
+                  "source_term": "부하 분산",
+                  "target_term": "load balancing",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Distributing traffic across multiple computing resources",
+                  "accepted_target_variants": [
+                    "load balancer"
+                  ],
+                  "replacement_rules": {
+                    "load dispersal": "load balancing",
+                    "load distribution": "load balancing",
+                    "men's distribution": "load balancing"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "캐시",
+                  "target_term": "cache",
+                  "retrieval_hit_id": "sw-cache",
+                  "target_variants": [
+                    "caching",
+                    "cached"
+                  ],
+                  "replacement_rules": {
+                    "cachet": "cache"
+                  }
+                },
+                {
+                  "source_term": "부하 분산",
+                  "target_term": "load balancing",
+                  "retrieval_hit_id": "sw-load-balancing",
+                  "target_variants": [
+                    "load balancer"
+                  ],
+                  "replacement_rules": {
+                    "load dispersal": "load balancing",
+                    "load distribution": "load balancing",
+                    "men's distribution": "load balancing"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Cache and his load balancing have been used to reduce response delays.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": false,
+                "quality_score": 0.3,
+                "error_types": [
+                  "term",
+                  "meaning",
+                  "omission_addition",
+                  "fluency_grammar"
+                ],
+                "summary": "The translation contains errors in term usage (e.g., 'his' instead of 'load balancing') and structure, affecting clarity and accuracy.",
+                "confidence": 0.5,
+                "next_action": "revise",
+                "suggested_query_terms": [
+                  "load balancing",
+                  "cache"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 5684.063917025924,
+                "retrieval_ms": 54.302125005051494,
+                "translation_ms": 562.8877088893205,
+                "revision_ms": 0.0,
+                "judgment_ms": 7029.590042075142,
+                "total_ms": 13330.93462511897
+              }
+            },
+            {
+              "attempt_index": 1,
+              "candidate_origin": "agent_revision",
+              "parent_attempt_index": 0,
+              "requested_action": "revise",
+              "applied_action": "revise",
+              "retrieval_query": null,
+              "retrieval_hits": [
+                {
+                  "term_id": "sw-cache",
+                  "source_term": "캐시",
+                  "target_term": "cache",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Temporary storage used to speed up repeated access",
+                  "accepted_target_variants": [
+                    "caching",
+                    "cached"
+                  ],
+                  "replacement_rules": {
+                    "cachet": "cache"
+                  }
+                },
+                {
+                  "term_id": "sw-load-balancing",
+                  "source_term": "부하 분산",
+                  "target_term": "load balancing",
+                  "domain": "software",
+                  "match_type": "exact",
+                  "score": 1.0,
+                  "definition": "Distributing traffic across multiple computing resources",
+                  "accepted_target_variants": [
+                    "load balancer"
+                  ],
+                  "replacement_rules": {
+                    "load dispersal": "load balancing",
+                    "load distribution": "load balancing",
+                    "men's distribution": "load balancing"
+                  }
+                }
+              ],
+              "applied_constraints": [
+                {
+                  "source_term": "캐시",
+                  "target_term": "cache",
+                  "retrieval_hit_id": "sw-cache",
+                  "target_variants": [
+                    "caching",
+                    "cached"
+                  ],
+                  "replacement_rules": {
+                    "cachet": "cache"
+                  }
+                },
+                {
+                  "source_term": "부하 분산",
+                  "target_term": "load balancing",
+                  "retrieval_hit_id": "sw-load-balancing",
+                  "target_variants": [
+                    "load balancer"
+                  ],
+                  "replacement_rules": {
+                    "load dispersal": "load balancing",
+                    "load distribution": "load balancing",
+                    "men's distribution": "load balancing"
+                  }
+                }
+              ],
+              "candidate": {
+                "text": "Cache and load balancing have been used to reduce response delays.",
+                "model_id": "qwen3:1.7b"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The translation accurately reflects the source text with correct terminology and grammatical structure.",
+                "confidence": 1.0,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "cache",
+                  "load balancing",
+                  "response delays"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 0.0,
+                "revision_ms": 6052.987542003393,
+                "judgment_ms": 7802.828500047326,
+                "total_ms": 13855.926875025034
+              }
+            }
+          ],
+          "final_attempt_index": 1,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 27187.56420793943,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 1,
+            "judgment": 2
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-012",
+      "mode": "agent_rag",
+      "response": {
+        "request_id": "2ac21afe-149f-4a2f-a23a-2e78c5f6d55e",
+        "mode": "agent_rag",
+        "source_text": "오늘 회의는 오후 세 시에 시작한다.",
+        "translation": "This meeting begins at three o'clock in the afternoon.",
+        "retry_count": 0,
+        "final_judgment": {
+          "passed": true,
+          "quality_score": 0.95,
+          "error_types": [],
+          "summary": "The translation is accurate but uses 'This' instead of 'Today's' to maintain generality, which is acceptable in English.",
+          "confidence": 0.9,
+          "next_action": "accept",
+          "suggested_query_terms": [
+            "오늘",
+            "오전 세 시"
+          ]
+        },
+        "trace": {
+          "source_analysis": {
+            "domain": "meeting",
+            "key_terms": [
+              "회의",
+              "오늘",
+              "오후 세 시"
+            ],
+            "confidence": 0.9
+          },
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "candidate_origin": "nmt",
+              "parent_attempt_index": null,
+              "requested_action": null,
+              "applied_action": null,
+              "retrieval_query": {
+                "source_text": "오늘 회의는 오후 세 시에 시작한다.",
+                "domain": "meeting",
+                "key_terms": [
+                  "회의",
+                  "오늘",
+                  "오후 세 시"
+                ],
+                "top_k": 3,
+                "attempt_index": 0
+              },
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "This meeting begins at three o'clock in the afternoon.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit"
+              },
+              "judgment": {
+                "passed": true,
+                "quality_score": 0.95,
+                "error_types": [],
+                "summary": "The translation is accurate but uses 'This' instead of 'Today's' to maintain generality, which is acceptable in English.",
+                "confidence": 0.9,
+                "next_action": "accept",
+                "suggested_query_terms": [
+                  "오늘",
+                  "오전 세 시"
+                ]
+              },
+              "timings": {
+                "analysis_ms": 5118.040124885738,
+                "retrieval_ms": 50.93195801600814,
+                "translation_ms": 405.748707940802,
+                "revision_ms": 0.0,
+                "judgment_ms": 7383.234583074227,
+                "total_ms": 12958.37016706355
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "passed",
+          "selection_reason": "passed",
+          "total_latency_ms": 12958.50508310832,
+          "component_call_counts": {
+            "analysis": 1,
+            "retrieval": 1,
+            "translation": 1,
+            "revision": 0,
+            "judgment": 1
+          },
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en+glossary-postedit",
+            "retriever": "ExactFirstHybridGlossaryRetriever",
+            "agent": "qwen3:1.7b",
+            "reviser": "qwen3:1.7b"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "generated_at_utc": "2026-08-20T04:12:49.017110+00:00",
+  "analysis_scope": "offline cached snapshots only",
+  "methodology_warning": "All anomaly flags, keyword hits, screening counts, examples, and the provisional ranking are heuristics. They do not automatically validate English reference translations.",
+  "datasets": {
+    "moo": {
+      "dataset_id": "moo",
+      "source_files": [
+        "train.csv",
+        "dev.csv",
+        "test.csv"
+      ],
+      "schema_by_split": {
+        "train": {
+          "ko": "string",
+          "en": "string"
+        },
+        "dev": {
+          "ko": "string",
+          "en": "string"
+        },
+        "test": {
+          "ko": "string",
+          "en": "string"
+        }
+      },
+      "rows_by_split": {
+        "train": 96215,
+        "dev": 1000,
+        "test": 2000
+      },
+      "source_columns": {
+        "korean": "ko",
+        "english": "en"
+      },
+      "row_count": 99215,
+      "null_and_blank": {
+        "korean_null": 0,
+        "english_null": 0,
+        "either_null": 0,
+        "korean_blank_after_normalization": 0,
+        "english_blank_after_normalization": 0
+      },
+      "duplicates_beyond_first": {
+        "parallel_pair": 15277,
+        "korean_source": 16682,
+        "english_reference": 18705,
+        "parallel_pair_rate_pct": 15.397873305447765
+      },
+      "lengths": {
+        "korean_chars": {
+          "count": 99215,
+          "min": 1,
+          "mean": 60.393478808647885,
+          "median": 59,
+          "p05": 17,
+          "p95": 112,
+          "p99": 142,
+          "max": 377
+        },
+        "english_chars": {
+          "count": 99215,
+          "min": 1,
+          "mean": 124.9070503452099,
+          "median": 120,
+          "p05": 34,
+          "p95": 238,
+          "p99": 293,
+          "max": 605
+        },
+        "english_to_korean_char_ratio": {
+          "count": 99215,
+          "min": 0.06451612903225806,
+          "mean": 2.185062051145632,
+          "median": 2.0268456375838926,
+          "p05": 1.1538461538461537,
+          "p95": 3.5,
+          "p99": 5.75,
+          "max": 100
+        }
+      },
+      "heuristic_anomalies": {
+        "counts": {
+          "null_or_blank_side": 0,
+          "no_hangul_on_korean_side": 783,
+          "no_latin_on_english_side": 69,
+          "very_short_side": 11,
+          "very_long_side_over_500_chars": 3,
+          "extreme_en_to_ko_char_ratio": 1498,
+          "identical_cross_language_text": 652,
+          "contains_url_or_markup": 153
+        },
+        "rows_with_any_flag": 2395,
+        "rows_with_any_flag_rate_pct": 2.413949503603286,
+        "warning": "These flags identify records for review; they do not prove that a parallel pair is mistranslated or unusable."
+      },
+      "software_keyword_screen": {
+        "keywords": [
+          "서버",
+          "소프트웨어",
+          "배포",
+          "캐시",
+          "장애",
+          "부하 분산",
+          "지속적 통합",
+          "회귀 테스트",
+          "롤백",
+          "메모리 누수",
+          "접근 제어",
+          "벡터 검색",
+          "데이터베이스",
+          "네트워크",
+          "버전"
+        ],
+        "hit_counts": {
+          "서버": 29,
+          "소프트웨어": 132,
+          "배포": 44,
+          "캐시": 29,
+          "장애": 182,
+          "부하 분산": 0,
+          "지속적 통합": 0,
+          "회귀 테스트": 0,
+          "롤백": 0,
+          "메모리 누수": 0,
+          "접근 제어": 2,
+          "벡터 검색": 0,
+          "데이터베이스": 17,
+          "네트워크": 95,
+          "버전": 49
+        },
+        "hit_counts_by_split": {
+          "서버": {
+            "train": 27,
+            "dev": 0,
+            "test": 2
+          },
+          "소프트웨어": {
+            "train": 125,
+            "dev": 5,
+            "test": 2
+          },
+          "배포": {
+            "train": 42,
+            "dev": 1,
+            "test": 1
+          },
+          "캐시": {
+            "train": 29,
+            "dev": 0,
+            "test": 0
+          },
+          "장애": {
+            "train": 164,
+            "dev": 13,
+            "test": 5
+          },
+          "부하 분산": {
+            "train": 0,
+            "dev": 0,
+            "test": 0
+          },
+          "지속적 통합": {
+            "train": 0,
+            "dev": 0,
+            "test": 0
+          },
+          "회귀 테스트": {
+            "train": 0,
+            "dev": 0,
+            "test": 0
+          },
+          "롤백": {
+            "train": 0,
+            "dev": 0,
+            "test": 0
+          },
+          "메모리 누수": {
+            "train": 0,
+            "dev": 0,
+            "test": 0
+          },
+          "접근 제어": {
+            "train": 2,
+            "dev": 0,
+            "test": 0
+          },
+          "벡터 검색": {
+            "train": 0,
+            "dev": 0,
+            "test": 0
+          },
+          "데이터베이스": {
+            "train": 17,
+            "dev": 0,
+            "test": 0
+          },
+          "네트워크": {
+            "train": 93,
+            "dev": 0,
+            "test": 2
+          },
+          "버전": {
+            "train": 48,
+            "dev": 0,
+            "test": 1
+          }
+        },
+        "rows_with_any_keyword": 563,
+        "rows_with_multiple_keywords": 16,
+        "distinct_keywords_with_hits": 9,
+        "screened_candidate_count": 490,
+        "screened_candidate_rate_pct": 0.4938769339313612,
+        "candidate_examples": [
+          {
+            "split": "train",
+            "source_row": 81503,
+            "source_ko": "어제 밤 라스베이거스에서 치러진 CES 무대를 꿰찬 사람은 바로 마이크로소프트 CEO 스티브 발머였습니다. 그는 이 자리에서 Windows 7이 개발 마무리 단계에 있고 일반 사용자들이 다운로드하여 사용할 수 있도록 내일부터 베타 테스트 버전을 배포하겠다고 밝혔습니다.",
+            "reference_en": "It was Microsoft's CEO Steve Ballmer taking the stage at Las Vegas last night, announcing Windows7 is almost ready for prime time and will be ready for beta testing by regular users who can download and play with it starting tomorrow.",
+            "keyword_hits": [
+              "배포",
+              "버전"
+            ],
+            "ko_chars": 150,
+            "en_chars": 234,
+            "en_to_ko_char_ratio": 1.56,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 56916,
+            "source_ko": "그들을 더 많이 끌어들이기 위해 스카이프는 개선된 보안 기능을 갖춘 비즈니스 버전 소프트웨어와 스카이프 신용과 집계를 중앙에서 관리하는 ‘통제 패널(control panel)’ 응용 프로그램을 만들었다.",
+            "reference_en": "To entice more of them, it created a business version of its software with improved security and a \"control panel\" application for central management of Skype credit and numbers.",
+            "keyword_hits": [
+              "소프트웨어",
+              "버전"
+            ],
+            "ko_chars": 113,
+            "en_chars": 178,
+            "en_to_ko_char_ratio": 1.5752,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 65034,
+            "source_ko": "130달러 (약 19만원) 소프트웨어의 유형성에 대한 다른 의견을 가진 사람들을 위해 아이파이(Eye-Fi)는 최근 이전 모델보다 용량을 2배 확장한 4기가 기념 버전 SD메모리카드를 공개했다.",
+            "reference_en": "For those who beg to differ with tangibility, Eye-Fi has recently released the 4GB Anniversary Edition of its much-hyped SD memory card, with double the capacity of previous models.",
+            "keyword_hits": [
+              "소프트웨어",
+              "버전"
+            ],
+            "ko_chars": 108,
+            "en_chars": 181,
+            "en_to_ko_char_ratio": 1.6759,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 71451,
+            "source_ko": "발머 CEO는 베니스호텔에 동굴처럼 조성된 대회장에 모인 첨단기술 전문가와 전문기자 수 천명이 모인 자리에서 “최고 버전의 윈도우를 배포하기 위해 진행 중이다”며 “최신 버전의 윈도우를 바로 잡고 준비하기 위해 열심히 하고 있다”고 밝혔다.",
+            "reference_en": "\"We are on track to deliver the best version of Windows ever,\" Ballmer told an audience of several thousand tech professionals and journalists inside a cavernous ballroom at the Venetian hotel. \"We're working hard to get it right and get it ready.\"",
+            "keyword_hits": [
+              "배포",
+              "버전"
+            ],
+            "ko_chars": 134,
+            "en_chars": 248,
+            "en_to_ko_char_ratio": 1.8507,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 48677,
+            "source_ko": "핸드폰 제조업체들, 네트워크 운영업체들, 소프트웨어 개발자들과 콘텐트 제공자들은 3세대 핸드폰 또는 3G 기기에 집어넣을 콘텐트를 발견하기 위해 서두르고 있다.",
+            "reference_en": "Mobile manufacturers, network operators, software developers and content providers are scrambling to find the content you want pushed to your third generation or 3G device.",
+            "keyword_hits": [
+              "소프트웨어",
+              "네트워크"
+            ],
+            "ko_chars": 89,
+            "en_chars": 172,
+            "en_to_ko_char_ratio": 1.9326,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 85664,
+            "source_ko": "한편 모토롤라는 핸드셋을, 인텔은 소프트웨어 개발과 네트워크 구축에 필요한 설비를 공급하게 된다.",
+            "reference_en": "Motorola will provide handsets and Intel will develop software and supply equipment to build the network.",
+            "keyword_hits": [
+              "소프트웨어",
+              "네트워크"
+            ],
+            "ko_chars": 54,
+            "en_chars": 105,
+            "en_to_ko_char_ratio": 1.9444,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 30206,
+            "source_ko": "지난 주말 청각 장애인 고등학교에서 인종적 의미가 함축된 단어를 사용한 범죄가 발생, ‘증오 범죄에 대한 강화된 처벌’로 형사 고발 조치됐다고 캐시 라니어 메트로 경찰서장이 3일(현지시간) 밝혔다.",
+            "reference_en": "WASHINGTON (CNN) A weekend incident with racial overtones at a high school for deaf students could result in criminal charges with \"enhanced penalties for a hate crime,\" Metro Police Chief Cathy Lanier said Wednesday.",
+            "keyword_hits": [
+              "캐시",
+              "장애"
+            ],
+            "ko_chars": 110,
+            "en_chars": 217,
+            "en_to_ko_char_ratio": 1.9727,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 79143,
+            "source_ko": "이번 급습 전까지 중국 불법 복제 조직은 20억 달러 어치 이상의 소프트웨어를 판매하고 배포한 것으로 알려져 있다.",
+            "reference_en": "Before the raids the Chinese counterfeiting syndicate was thought to have sold and distributed software worth more than $2 billion.",
+            "keyword_hits": [
+              "소프트웨어",
+              "배포"
+            ],
+            "ko_chars": 64,
+            "en_chars": 131,
+            "en_to_ko_char_ratio": 2.0469,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "test",
+            "source_row": 317,
+            "source_ko": "3G 무선 네트워크 접근성 강화, 마이크로소프트 익스체인지 서버 이메일, ‘앱 스토어(App Store)'에서 내려받을 수 있는 제3의 소트프웨어는 우리가 3G 아이폰에서 기대했던 것이다.",
+            "reference_en": "With access to a faster 3G wireless network, Microsoft Exchange server e-mail, and support for a staggering array of third-party software from the iPhone App Store, the new handset is the iPhone we've been waiting for.",
+            "keyword_hits": [
+              "서버",
+              "네트워크"
+            ],
+            "ko_chars": 105,
+            "en_chars": 218,
+            "en_to_ko_char_ratio": 2.0762,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 42569,
+            "source_ko": "게이츠 회장은 LA에서 가진 연설에서 \"마이크로소프트는 차세대 윈도우 서버 소프트웨어의 이름을 윈도우 2008로 지었다\"고 발표했다.",
+            "reference_en": "During a speech in Los Angeles, Gates said the company named its next-generation Windows Server software formerly known as \"Longhorn\" Windows Server 2008.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어"
+            ],
+            "ko_chars": 74,
+            "en_chars": 154,
+            "en_to_ko_char_ratio": 2.0811,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 9829,
+            "source_ko": "멜리사의 엄마와 섭식장애 정보 네트워크 창설자이자 치료 임상 심리학자 디나 제크하우젠은 멜리사의 어깨 너머로 멜리사가 요리하는 것을 보고만 있다.",
+            "reference_en": "Not only is her mother peeking over Melissa's shoulder as she works, but so is clinical psychologist Dina Zeckhausen, founder of the Eating Disorders Information Network.",
+            "keyword_hits": [
+              "장애",
+              "네트워크"
+            ],
+            "ko_chars": 81,
+            "en_chars": 170,
+            "en_to_ko_char_ratio": 2.0988,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "test",
+            "source_row": 591,
+            "source_ko": "더군다나 최신 소프트웨어는 구형 아이폰을 다시 작동시키기 위한 버전이었다.",
+            "reference_en": "Additionally, new software was released for the old iPhone, which required reactivation of those phones.",
+            "keyword_hits": [
+              "소프트웨어",
+              "버전"
+            ],
+            "ko_chars": 41,
+            "en_chars": 104,
+            "en_to_ko_char_ratio": 2.5366,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          }
+        ],
+        "warning": "Literal Korean keyword matching is recall-oriented and cannot confirm software-domain relevance or English reference quality."
+      }
+    },
+    "lemon_mint": {
+      "dataset_id": "lemon_mint",
+      "source_files": [
+        "train-00000-of-00001.parquet"
+      ],
+      "schema_by_split": {
+        "train": {
+          "korean": "str",
+          "english": "str"
+        }
+      },
+      "rows_by_split": {
+        "train": 492564
+      },
+      "source_columns": {
+        "korean": "korean",
+        "english": "english"
+      },
+      "row_count": 492564,
+      "null_and_blank": {
+        "korean_null": 0,
+        "english_null": 0,
+        "either_null": 0,
+        "korean_blank_after_normalization": 0,
+        "english_blank_after_normalization": 0
+      },
+      "duplicates_beyond_first": {
+        "parallel_pair": 11202,
+        "korean_source": 17073,
+        "english_reference": 12874,
+        "parallel_pair_rate_pct": 2.2742222330499184
+      },
+      "lengths": {
+        "korean_chars": {
+          "count": 492564,
+          "min": 5,
+          "mean": 96.25028625721734,
+          "median": 87,
+          "p05": 31,
+          "p95": 180,
+          "p99": 210,
+          "max": 427
+        },
+        "english_chars": {
+          "count": 492564,
+          "min": 9,
+          "mean": 203.92886609658845,
+          "median": 183,
+          "p05": 63,
+          "p95": 388,
+          "p99": 456,
+          "max": 786
+        },
+        "english_to_korean_char_ratio": {
+          "count": 492564,
+          "min": 0.8613138686131386,
+          "mean": 2.121677045637306,
+          "median": 2.107142857142857,
+          "p05": 1.670944306589468,
+          "p95": 2.617283950617284,
+          "p99": 2.918918918918919,
+          "max": 4.46875
+        }
+      },
+      "heuristic_anomalies": {
+        "counts": {
+          "null_or_blank_side": 0,
+          "no_hangul_on_korean_side": 21,
+          "no_latin_on_english_side": 0,
+          "very_short_side": 0,
+          "very_long_side_over_500_chars": 1583,
+          "extreme_en_to_ko_char_ratio": 0,
+          "identical_cross_language_text": 15,
+          "contains_url_or_markup": 13
+        },
+        "rows_with_any_flag": 1617,
+        "rows_with_any_flag_rate_pct": 0.32828221307281896,
+        "warning": "These flags identify records for review; they do not prove that a parallel pair is mistranslated or unusable."
+      },
+      "software_keyword_screen": {
+        "keywords": [
+          "서버",
+          "소프트웨어",
+          "배포",
+          "캐시",
+          "장애",
+          "부하 분산",
+          "지속적 통합",
+          "회귀 테스트",
+          "롤백",
+          "메모리 누수",
+          "접근 제어",
+          "벡터 검색",
+          "데이터베이스",
+          "네트워크",
+          "버전"
+        ],
+        "hit_counts": {
+          "서버": 382,
+          "소프트웨어": 1961,
+          "배포": 419,
+          "캐시": 142,
+          "장애": 3949,
+          "부하 분산": 4,
+          "지속적 통합": 2,
+          "회귀 테스트": 2,
+          "롤백": 8,
+          "메모리 누수": 22,
+          "접근 제어": 11,
+          "벡터 검색": 0,
+          "데이터베이스": 502,
+          "네트워크": 1230,
+          "버전": 225
+        },
+        "hit_counts_by_split": {
+          "서버": {
+            "train": 382
+          },
+          "소프트웨어": {
+            "train": 1961
+          },
+          "배포": {
+            "train": 419
+          },
+          "캐시": {
+            "train": 142
+          },
+          "장애": {
+            "train": 3949
+          },
+          "부하 분산": {
+            "train": 4
+          },
+          "지속적 통합": {
+            "train": 2
+          },
+          "회귀 테스트": {
+            "train": 2
+          },
+          "롤백": {
+            "train": 8
+          },
+          "메모리 누수": {
+            "train": 22
+          },
+          "접근 제어": {
+            "train": 11
+          },
+          "벡터 검색": {
+            "train": 0
+          },
+          "데이터베이스": {
+            "train": 502
+          },
+          "네트워크": {
+            "train": 1230
+          },
+          "버전": {
+            "train": 225
+          }
+        },
+        "rows_with_any_keyword": 8435,
+        "rows_with_multiple_keywords": 395,
+        "distinct_keywords_with_hits": 14,
+        "screened_candidate_count": 8248,
+        "screened_candidate_rate_pct": 1.6745032117653749,
+        "candidate_examples": [
+          {
+            "split": "train",
+            "source_row": 164637,
+            "source_ko": "리눅스는 서버 운영 체제로서 널리 사용되고 있으며, 웹 서버, 데이터베이스 서버, 클라우드 컴퓨팅 플랫폼 등 다양한 용도로 사용됩니다. 리눅스는 또한 데스크톱 운영 체제로도 인기를 끌고 있으며, 우분투, 페도라, 맨자로 등 다양한 배포판이 있습니다. 리눅스 배포판은 사용자의 요구 사항에 맞게 다양한 데스크톱 환경, 소프트웨어 패키지, 구성 옵션을 제공합니다.",
+            "reference_en": "Linux is widely used as a server operating system, and it is employed for a variety of purposes, including web servers, database servers, and cloud computing platforms. Linux is also gaining popularity as a desktop operating system, with various distributions available, such as Ubuntu, Fedora, and Manjaro. Linux distributions offer a variety of desktop environments, software packages, and configuration options to suit the needs of users.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어",
+              "배포",
+              "데이터베이스"
+            ],
+            "ko_chars": 201,
+            "en_chars": 441,
+            "en_to_ko_char_ratio": 2.194,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 308978,
+            "source_ko": "카사(Casa)는 비트코인 네트워크에서 비트코인을 보관하는 안전한 방법을 제공하는 오픈소스 소프트웨어 지갑입니다. 카사는 멀티시그(multisig) 기술을 사용하여 사용자의 비트코인을 보호하며, 이는 여러 개의 개인 키가 필요하여 거래를 승인해야 한다는 것을 의미합니다. 이를 통해 단일 지점 장애(single point of failure)가 제거되고 해커가 사용자의 자금에 액세스하는 것이 더욱 어려워집니다.",
+            "reference_en": "Casa is an open-source software wallet that provides a secure way to store Bitcoin on the Bitcoin network. Casa utilizes multisig technology to safeguard users' Bitcoin, meaning that multiple private keys are required to authorize transactions. This eliminates single points of failure and makes it significantly more difficult for hackers to access users' funds.",
+            "keyword_hits": [
+              "소프트웨어",
+              "장애",
+              "네트워크"
+            ],
+            "ko_chars": 230,
+            "en_chars": 363,
+            "en_to_ko_char_ratio": 1.5783,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 80106,
+            "source_ko": "지속적 통합(CI)는 소프트웨어 개발에서 팀이 코드 변경 사항을 자주 통합하고 테스트하는 관행입니다. 이를 통해 팀은 문제를 조기에 발견하고 수정할 수 있으며, 소프트웨어 품질을 향상시킬 수 있습니다. CI는 일반적으로 자동화된 빌드, 테스트 및 배포 프로세스를 포함하며, 이를 통해 개발자는 코드 변경 사항이 전체 시스템에 미치는 영향을 신속하게 확인할 수 있습니다.",
+            "reference_en": "Continuous integration (CI) is a software development practice where teams integrate and test code changes frequently. This allows teams to identify and fix issues early, leading to improved software quality. CI typically involves automated build, test, and deployment processes, enabling developers to quickly see the impact of code changes on the overall system.",
+            "keyword_hits": [
+              "소프트웨어",
+              "배포",
+              "지속적 통합"
+            ],
+            "ko_chars": 206,
+            "en_chars": 364,
+            "en_to_ko_char_ratio": 1.767,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 351109,
+            "source_ko": "XAMPP는 웹 개발에 필요한 모든 것을 제공하는 무료 소프트웨어 패키지입니다. Apache 웹 서버, MariaDB 데이터베이스, PHP 및 Perl과 같은 프로그래밍 언어를 포함합니다.",
+            "reference_en": "XAMPP is a free software package that provides everything you need for web development. It includes the Apache web server, the MariaDB database, and programming languages like PHP and Perl.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어",
+              "데이터베이스"
+            ],
+            "ko_chars": 105,
+            "en_chars": 189,
+            "en_to_ko_char_ratio": 1.8,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 195264,
+            "source_ko": "컴퓨터 공학자는 컴퓨터 시스템, 네트워크, 데이터베이스, 소프트웨어 애플리케이션을 설계하고 개발합니다.",
+            "reference_en": "Computer engineers design and develop computer systems, networks, databases, and software applications.",
+            "keyword_hits": [
+              "소프트웨어",
+              "데이터베이스",
+              "네트워크"
+            ],
+            "ko_chars": 57,
+            "en_chars": 103,
+            "en_to_ko_char_ratio": 1.807,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 123588,
+            "source_ko": "또한 피어투피어 네트워킹은 대역폭을 효율적으로 사용합니다. 파일을 다운로드할 때, 피어투피어 네트워크는 파일을 이미 보유한 여러 컴퓨터에서 파일을 다운로드하여 다운로드 시간을 단축합니다. 그러나 피어투피어 네트워킹에는 보안 및 프라이버시 문제가 있을 수 있습니다. 예를 들어, 악의적인 사용자는 피어투피어 네트워크를 통해 악성 소프트웨어를 배포할 수 있습니다.",
+            "reference_en": "Peer-to-peer networking also utilizes bandwidth efficiently. When downloading a file, a peer-to-peer network downloads the file from multiple computers that already have the file, reducing download times. However, there can be security and privacy concerns with peer-to-peer networking. For example, malicious users can distribute malware through peer-to-peer networks.",
+            "keyword_hits": [
+              "소프트웨어",
+              "배포",
+              "네트워크"
+            ],
+            "ko_chars": 201,
+            "en_chars": 369,
+            "en_to_ko_char_ratio": 1.8358,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 126882,
+            "source_ko": "Tor는 인터넷 사용자의 프라이버시와 익명성을 보호하기 위해 설계된 무료 소프트웨어입니다. Tor 네트워크는 전 세계에 분산된 수천 개의 릴레이 서버를 통해 인터넷 트래픽을 라우팅하여 사용자의 실제 IP 주소를 숨깁니다. 이를 통해 사용자는 온라인 활동을 추적하거나 감시하는 것을 피할 수 있습니다.",
+            "reference_en": "Tor is free software designed to protect the privacy and anonymity of internet users. The Tor network conceals a user's real IP address by routing internet traffic through thousands of relay servers distributed around the globe. This allows users to avoid being tracked or surveilled for their online activities.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어",
+              "네트워크"
+            ],
+            "ko_chars": 167,
+            "en_chars": 312,
+            "en_to_ko_char_ratio": 1.8683,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 163672,
+            "source_ko": "오뎀은 텍스트 기반 게임의 선구자로서, 이후의 많은 MUD와 MMORPG에 영감을 주었습니다. 또한 오픈 소스 소프트웨어로 배포되어 누구나 자신의 서버를 호스팅하고 커뮤니티를 만들 수 있습니다. 오뎀은 오늘날에도 여전히 인기 있는 게임이며, 협업적 스토리텔링과 커뮤니티 구축에 대한 지속적인 영향력을 보여줍니다.",
+            "reference_en": "As a pioneer of text-based gaming, Odem has inspired many later MUDs and MMORPGs. It is also distributed as open-source software, allowing anyone to host their own server and create their own community. Odem remains a popular game today, demonstrating its lasting influence on collaborative storytelling and community building.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어",
+              "배포"
+            ],
+            "ko_chars": 174,
+            "en_chars": 327,
+            "en_to_ko_char_ratio": 1.8793,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 360265,
+            "source_ko": "소프트웨어 정의 네트워킹(SDN)은 네트워크 관리를 혁명화하는 새로운 패러다임입니다. SDN에서는 네트워크의 제어 평면과 데이터 평면이 분리되어, 네트워크 관리자가 소프트웨어를 통해 네트워크를 중앙 집중적으로 제어할 수 있습니다. 이를 통해 네트워크 관리가 더욱 유연하고 자동화되며, 새로운 서비스를 신속하게 배포할 수 있습니다.",
+            "reference_en": "Software-defined networking (SDN) is a new paradigm that is revolutionizing network management. In SDN, the control plane and data plane of the network are decoupled, allowing network administrators to centrally control the network through software. This makes network management more flexible, automated, and enables rapid deployment of new services.",
+            "keyword_hits": [
+              "소프트웨어",
+              "배포",
+              "네트워크"
+            ],
+            "ko_chars": 184,
+            "en_chars": 351,
+            "en_to_ko_char_ratio": 1.9076,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 315828,
+            "source_ko": "클라우드 컴퓨팅은 인터넷을 통해 소프트웨어, 플랫폼 및 기타 리소스에 액세스할 수 있는 컴퓨팅 모델입니다. 클라우드 서비스 제공업체는 서버, 스토리지, 데이터베이스 및 분석 도구와 같은 리소스를 제공하며, 사용자는 필요에 따라 이러한 리소스에 액세스할 수 있습니다. 클라우드 컴퓨팅은 비용 절감, 유연성 향상, 혁신 가속화 등 다양한 이점을 제공합니다.",
+            "reference_en": "Cloud computing is a computing model that enables access to software, platforms, and other resources over the internet. Cloud service providers offer resources such as servers, storage, databases, and analytics tools, which users can access on a pay-as-you-go basis. Cloud computing offers several benefits, including cost savings, increased agility, and accelerated innovation.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어",
+              "데이터베이스"
+            ],
+            "ko_chars": 197,
+            "en_chars": 378,
+            "en_to_ko_char_ratio": 1.9188,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 67903,
+            "source_ko": "플랫폼 즉 서비스(PaaS)는 개발자가 애플리케이션을 구축, 배포, 관리할 수 있는 클라우드 컴퓨팅 모델입니다. PaaS는 인프라(서버, 스토리지, 네트워킹)와 미들웨어(데이터베이스, 메시징, 보안)를 제공합니다. 개발자는 이러한 기본 구성 요소에 대해 걱정할 필요 없이 애플리케이션 코드에 집중할 수 있습니다.",
+            "reference_en": "Platform as a service (PaaS) is a cloud computing model that enables developers to build, deploy, and manage applications. PaaS provides the infrastructure (servers, storage, networking) and middleware (databases, messaging, security). Developers can focus on their application code without having to worry about these underlying components.",
+            "keyword_hits": [
+              "서버",
+              "배포",
+              "데이터베이스"
+            ],
+            "ko_chars": 174,
+            "en_chars": 341,
+            "en_to_ko_char_ratio": 1.9598,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          },
+          {
+            "split": "train",
+            "source_row": 90383,
+            "source_ko": "우분투는 리눅스 배포판으로, 사용자 친화적이고 안정적이며 무료로 사용할 수 있습니다. 우분투는 데스크톱, 서버, 클라우드 컴퓨팅을 포함한 다양한 플랫폼에서 사용할 수 있으며, 개인 사용자, 기업 및 개발자에게 인기가 있습니다. 우분투의 주요 특징으로는 사용자 친화적인 그래픽 사용자 인터페이스, 광범위한 소프트웨어 패키지, 강력한 커뮤니티 지원 등이 있습니다.",
+            "reference_en": "Ubuntu is a Linux distribution known for its user-friendliness, stability, and free availability. It is designed for various platforms, including desktops, servers, and cloud computing, and is popular among individual users, businesses, and developers. Key features of Ubuntu include its user-friendly graphical user interface, a vast repository of software packages, and strong community support.",
+            "keyword_hits": [
+              "서버",
+              "소프트웨어",
+              "배포"
+            ],
+            "ko_chars": 201,
+            "en_chars": 397,
+            "en_to_ko_char_ratio": 1.9751,
+            "review_status": "UNREVIEWED_HEURISTIC_CANDIDATE"
+          }
+        ],
+        "warning": "Literal Korean keyword matching is recall-oriented and cannot confirm software-domain relevance or English reference quality."
+      }
+    }
+  },
+  "provisional_selection": {
+    "provisional_dataset": "lemon_mint",
+    "selection_status": "PROVISIONAL_FOR_MANUAL_REVIEW",
+    "ranking_basis": [
+      "number of distinct requested software keywords with at least one hit",
+      "number of non-duplicate candidates passing basic length/script heuristics",
+      "lower duplicate-pair rate",
+      "lower basic anomaly-flag rate"
+    ],
+    "selected_evidence": {
+      "screened_candidate_count": 8248,
+      "distinct_keywords_with_hits": 14
+    },
+    "mandatory_hold_points": [
+      "A bilingual reviewer must verify source-reference alignment and translation quality.",
+      "Keyword hits must be checked for actual software-domain meaning and ambiguity.",
+      "At least five glossary terms need enough manually approved examples for a balanced 30-50 sentence set.",
+      "Near-duplicates and cross-dataset overlap require a second pass before freezing the final set.",
+      "Licensing, attribution, provenance, and dataset-card limitations remain part of the final selection decision."
+    ],
+    "not_a_quality_verdict": true
+  }
+}

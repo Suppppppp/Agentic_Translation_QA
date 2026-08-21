@@ -1,0 +1,528 @@
+{
+  "run_id": "8f27b86f-1fe7-447b-826b-2a494f1b6f28",
+  "dataset_id": "pilot_v1",
+  "modes": [
+    "baseline"
+  ],
+  "metrics_by_mode": {
+    "baseline": {
+      "sample_count": 12,
+      "terminology_accuracy_pct": 25.0,
+      "changed_sentence_rate_pct": null,
+      "successful_correction_rate_pct": null,
+      "mean_latency_ms": 302.27586462084827,
+      "median_latency_ms": 296.04429157916456,
+      "p95_latency_ms": 398.79487501457334,
+      "mean_retry_count": null,
+      "retry_distribution": {},
+      "agent_judgment_accuracy_pct": null,
+      "error_counts": {}
+    }
+  },
+  "results": [
+    {
+      "case_id": "pilot-001",
+      "mode": "baseline",
+      "response": {
+        "request_id": "a257132c-3cba-4a31-9d7a-500d535f460b",
+        "mode": "baseline",
+        "source_text": "개발팀은 금요일에 새 버전을 운영 환경에 배포한다.",
+        "translation": "Development team distributes a new version of the operating environment on Friday.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Development team distributes a new version of the operating environment on Friday.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 313.5743329767138,
+                "judgment_ms": 0.0,
+                "total_ms": 313.57570900581777
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 313.59354103915393,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-002",
+      "mode": "baseline",
+      "response": {
+        "request_id": "44c675e2-f02f-490f-9e1f-49c0002af33c",
+        "mode": "baseline",
+        "source_text": "설정이 바뀌면 오래된 캐시를 즉시 삭제해야 한다.",
+        "translation": "If the settings change, the old cache must be deleted immediately.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "If the settings change, the old cache must be deleted immediately.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 309.4432500656694,
+                "judgment_ms": 0.0,
+                "total_ms": 309.44420816376805
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 309.4645831733942,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-003",
+      "mode": "baseline",
+      "response": {
+        "request_id": "859e1727-5431-433b-81f8-c213d2d1d1ee",
+        "mode": "baseline",
+        "source_text": "주 서버가 중단되면 자동 장애 조치가 대기 서버를 활성화한다.",
+        "translation": "When the main server is suspended, automatic disability measures activate the waiting server.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "When the main server is suspended, automatic disability measures activate the waiting server.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 346.47674998268485,
+                "judgment_ms": 0.0,
+                "total_ms": 346.477875020355
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 346.4949589688331,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-004",
+      "mode": "baseline",
+      "response": {
+        "request_id": "30255917-f35e-4429-814e-66a8db0c3196",
+        "mode": "baseline",
+        "source_text": "부하 분산은 여러 서버에 요청을 고르게 전달한다.",
+        "translation": "Load dispersal sends requests to multiple servers.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Load dispersal sends requests to multiple servers.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 245.05287501960993,
+                "judgment_ms": 0.0,
+                "total_ms": 245.05400005728006
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 245.0724591035396,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-005",
+      "mode": "baseline",
+      "response": {
+        "request_id": "b0cc2c65-3618-4848-ab42-a2724279869a",
+        "mode": "baseline",
+        "source_text": "지속적 통합 파이프라인은 커밋마다 테스트를 실행한다.",
+        "translation": "The persistent integrated pipeline will run a test every time you commit.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "The persistent integrated pipeline will run a test every time you commit.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 286.2050000112504,
+                "judgment_ms": 0.0,
+                "total_ms": 286.205958109349
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 286.2239589449018,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-006",
+      "mode": "baseline",
+      "response": {
+        "request_id": "77eba452-e918-41fa-98b7-aec8c143e234",
+        "mode": "baseline",
+        "source_text": "릴리스 전에 전체 회귀 테스트를 다시 실행하자.",
+        "translation": "Let's run the full return test again before release.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Let's run the full return test again before release.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 340.71408305317163,
+                "judgment_ms": 0.0,
+                "total_ms": 340.7190421130508
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 340.7612501177937,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-007",
+      "mode": "baseline",
+      "response": {
+        "request_id": "08ce35c0-1487-4e39-91d5-7e6b35b550aa",
+        "mode": "baseline",
+        "source_text": "오류율이 증가하면 이전 버전으로 롤백한다.",
+        "translation": "If the error rate increases, roll to the previous version.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "If the error rate increases, roll to the previous version.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 270.01570793800056,
+                "judgment_ms": 0.0,
+                "total_ms": 270.01675008796155
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 270.0318330898881,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-008",
+      "mode": "baseline",
+      "response": {
+        "request_id": "c028ca58-ef9f-4e51-a44c-5cb69b144609",
+        "mode": "baseline",
+        "source_text": "장시간 실행 후 메모리 누수가 발견되었다.",
+        "translation": "Memory leaks were found after long hours of running.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Memory leaks were found after long hours of running.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 245.28191704303026,
+                "judgment_ms": 0.0,
+                "total_ms": 245.28316617943347
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 245.30275003053248,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-009",
+      "mode": "baseline",
+      "response": {
+        "request_id": "4f3b3f5e-ed2f-4bed-9ccb-334e13747251",
+        "mode": "baseline",
+        "source_text": "관리자 화면에는 역할 기반 접근 제어를 적용한다.",
+        "translation": "A role-based access control is used for the manager screen.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "A role-based access control is used for the manager screen.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 289.0396248549223,
+                "judgment_ms": 0.0,
+                "total_ms": 289.04058411717415
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 289.060166105628,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-010",
+      "mode": "baseline",
+      "response": {
+        "request_id": "055195ed-fdc5-4fac-9ae4-bd20e1a4b1fa",
+        "mode": "baseline",
+        "source_text": "벡터 검색은 의미가 비슷한 문서를 찾는 데 사용된다.",
+        "translation": "The vector search is used to find similar documents with meaning.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "The vector search is used to find similar documents with meaning.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 303.01220901310444,
+                "judgment_ms": 0.0,
+                "total_ms": 303.0132921412587
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 303.0284170527011,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-011",
+      "mode": "baseline",
+      "response": {
+        "request_id": "8563fc62-7837-4f70-925e-2d749525bd8f",
+        "mode": "baseline",
+        "source_text": "캐시와 부하 분산을 함께 사용해 응답 지연을 줄였다.",
+        "translation": "Cachet and his men's distribution have been used to reduce response delays.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "Cachet and his men's distribution have been used to reduce response delays.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 398.77283410169184,
+                "judgment_ms": 0.0,
+                "total_ms": 398.77379103563726
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 398.79487501457334,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "pilot-012",
+      "mode": "baseline",
+      "response": {
+        "request_id": "67706eba-550f-4ab4-bbdd-64122ca8807a",
+        "mode": "baseline",
+        "source_text": "오늘 회의는 오후 세 시에 시작한다.",
+        "translation": "This meeting begins at three o'clock in the afternoon.",
+        "retry_count": 0,
+        "final_judgment": null,
+        "trace": {
+          "source_analysis": null,
+          "attempts": [
+            {
+              "attempt_index": 0,
+              "retrieval_query": null,
+              "retrieval_hits": [],
+              "applied_constraints": [],
+              "candidate": {
+                "text": "This meeting begins at three o'clock in the afternoon.",
+                "model_id": "Helsinki-NLP/opus-mt-ko-en"
+              },
+              "judgment": null,
+              "timings": {
+                "analysis_ms": 0.0,
+                "retrieval_ms": 0.0,
+                "translation_ms": 279.46550003252923,
+                "judgment_ms": 0.0,
+                "total_ms": 279.466541018337
+              }
+            }
+          ],
+          "final_attempt_index": 0,
+          "stop_reason": "baseline_complete",
+          "total_latency_ms": 279.4815828092396,
+          "warnings": [],
+          "model_versions": {
+            "translator": "Helsinki-NLP/opus-mt-ko-en"
+          }
+        }
+      }
+    }
+  ]
+}

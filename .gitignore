@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+
+# Python bytecode and environments
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Tests, coverage, and static analysis
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Downloaded models and generated caches
+.cache/
+.huggingface/
+models/
+chroma/
+chroma_db/
+data/cache/
+data/downloads/
+data/vector_store/
+
+# Local experiment output
+benchmark_outputs/
+logs/
+*.log

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "review_status": "external_opinion_unverified/ai_assisted",
+  "human_confirmed": false,
+  "candidate_file": "artifacts/eda/evaluation_candidates.jsonl",
+  "candidate_sha256": "d4ee9803220a6179637a0d9557a5dc93ad4a6d2791f1567ff60a70a50103c9c2",
+  "selection_manifest_file": "data/evaluation_selection_v1_draft.json",
+  "ordered_source_id_sha256": "b4f4ba69d7867c323deb2b545b87f040b114a37db0386ab68e08dc6009f001c8",
+  "feedback_file_label": "번역검수.md",
+  "feedback_sha256": "099b40811f3d3c9453c8c33e60f7d163d0ea84d2d529ff986ecdc65458d01e7b",
+  "original_reference_sha256_contract": "SHA-256 of the exact UTF-8 english_reference string from the anchored candidate file, with no trailing newline.",
+  "reference_policy": {
+    "public_candidate_reference_preserved": true,
+    "corrections_are_overlay_only": true,
+    "application_boundary": "explicit_offline_materialization_only_never_runtime"
+  },
+  "corrections": [
+    {
+      "case_order": 8,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000120253",
+      "original_reference_sha256": "dc25b2b91d72938aea749cc6688dbdd93edb9fd35e3922a6982ad040144bc9aa",
+      "corrected_reference_text": "JavaScript runs in the browser, so it does not rely on a server.",
+      "rationale": "선행 문맥에서 특정 서버가 정의되지 않아 일반적인 서버를 가리키는 부정관사 a가 더 자연스럽다."
+    },
+    {
+      "case_order": 9,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000061027",
+      "original_reference_sha256": "f3db95c616085bd1b287f025e9fe081294d5af8a7513c482de0e94b87f60f296",
+      "corrected_reference_text": "Load balancing is a technique that distributes traffic across multiple servers to protect applications from a single point of failure and improve performance.",
+      "rationale": "복수형도 실제로 쓰이지만, 원문의 단수 개념과 관용적인 a single point of failure가 더 직접 대응한다."
+    },
+    {
+      "case_order": 11,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000291918",
+      "original_reference_sha256": "d4af6fc779af6ab37b2c04aa7382daa6673d0a6f45690705febc44e3e83abcaf",
+      "corrected_reference_text": "Bash is a shell used to execute commands on Linux and Unix-like operating systems.",
+      "rationale": "운영 체제 위에서 실행된다는 관계에는 on이 적합하고 execute commands가 기술 문체에 자연스럽다."
+    },
+    {
+      "case_order": 16,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000052702",
+      "original_reference_sha256": "f1ac2c9e3d5d366ba9186fb27d9487c8179b53cae0a7c99a7033c25034c47a4c",
+      "corrected_reference_text": "Node.js is a JavaScript runtime environment that enables JavaScript code to run on the server side.",
+      "rationale": "Node.js라는 명칭을 명시하고 2인칭 you를 제거해 다른 평가 문장과 객관적 설명 톤을 맞춘다."
+    },
+    {
+      "case_order": 30,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000101003",
+      "original_reference_sha256": "15c63f189062791ee01dfeb2b01abf3cade20b1568ab6089fea911e58dfc428d",
+      "corrected_reference_text": "A peer-to-peer network allows users to connect directly and share files or data without a central server.",
+      "rationale": "Peer-to-peer 개념을 네트워크 실체와 바로 동일시하는 어색한 구조를 피하면서 원문의 직접 연결·공유 의미를 보존한다."
+    },
+    {
+      "case_order": 35,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127912",
+      "original_reference_sha256": "508087948de12fbda14bc6bc7fb2b890e0fcc18ae6a97f6f169f29ad5acac5f9",
+      "corrected_reference_text": "Cloud computing is used in a wide range of fields, including software development, data analytics, and machine learning.",
+      "rationale": "원문의 '분야'와 열거된 항목은 industries보다 fields에 직접 대응한다."
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "generated_at_utc": "2026-08-20T04:10:47.249363+00:00",
+  "status": "UNREVIEWED_REVIEW_POOL_NOT_FINAL_DATASET",
+  "final_dataset_frozen": false,
+  "benchmark_run": false,
+  "quality_warning": "Source-only eligibility is a reproducible screening heuristic, not a translation-quality or source-reference alignment verdict.",
+  "english_reference_policy": "manual_alignment_review_only_not_used_for_selection_or_term_extraction",
+  "dataset": {
+    "dataset_id": "lemon-mint/korean_parallel_sentences_v1.1",
+    "dataset_revision": "c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1",
+    "shard_id": "train-00000-of-00001",
+    "local_parquet": "36079d00a3242950b89bbb772dc1eedc908fd18a258ec327bcb1cc26cf2f23f6",
+    "local_path_redacted": true,
+    "parquet_sha256": "36079d00a3242950b89bbb772dc1eedc908fd18a258ec327bcb1cc26cf2f23f6",
+    "row_count": 492564,
+    "source_record_id_pattern": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:<zero-padded-row-offset>"
+  },
+  "glossary_lexicon": {
+    "path": "data/glossary_evaluation_v2.csv",
+    "sha256": "476f0a3476e24c2b0bf66fae4e3e22dc97b4018dda91d68ef66d1c03d506a1d4",
+    "source_term_column": "source_term_ko",
+    "source_terms": [
+      "배포",
+      "캐시",
+      "장애 조치",
+      "부하 분산",
+      "지속적 통합",
+      "회귀 테스트",
+      "롤백",
+      "메모리 누수",
+      "접근 제어",
+      "벡터 검색",
+      "서버",
+      "소프트웨어",
+      "데이터베이스",
+      "운영 체제",
+      "클라우드 컴퓨팅",
+      "오픈 소스"
+    ],
+    "only_source_term_column_loaded_for_lexicon": true
+  },
+  "selection_contract": {
+    "algorithm_version": "source-only-term-stratified-v1",
+    "seed": 42,
+    "per_term_review_pool_target": 30,
+    "korean_character_range_inclusive": [
+      20,
+      180
+    ],
+    "max_sentence_boundaries": 1,
+    "normalization": "NFKC, trim, collapse whitespace",
+    "literal_match": "fixed pre-review Korean glossary source terms only",
+    "term_matcher": "translation_qa.retrieval.contains_source_term; Korean particles and light-verb inflections allowed, longer lexical compounds rejected",
+    "deduplication": "keep first row for each normalized Korean source; this also guarantees that no exact source-reference pair can repeat without inspecting English",
+    "fields_used_for_selection": [
+      "korean",
+      "original parquet row offset",
+      "fixed glossary source_term lexicon"
+    ],
+    "reference_used_for_selection": false,
+    "reference_used_for_term_extraction": false
+  },
+  "selection_config_hash": "80a865af3ff96441a6f7c9bf7296b7b476b91c7f9bf49797ad59d21f28f08aaf",
+  "counts": {
+    "rows_with_any_literal_term": 3544,
+    "source_only_eligible_unique_rows": 269,
+    "output_unique_rows": 154,
+    "output_multi_term_rows": 29
+  },
+  "filter_diagnostics_non_exclusive": {
+    "total_source_rows": 492564,
+    "blank_source": 0,
+    "no_literal_glossary_term": 489020,
+    "no_hangul": 21,
+    "below_min_korean_chars": 2982,
+    "above_max_korean_chars": 24024,
+    "contains_line_break": 0,
+    "too_many_sentence_boundaries": 386817,
+    "normalized_source_duplicates_beyond_first": 17073
+  },
+  "exact_pair_deduplication": {
+    "english_inspected": false,
+    "remaining_possible_exact_pair_duplicates": 0,
+    "reason": "Every emitted normalized Korean source is unique, so two emitted rows cannot have the same (Korean source, English reference) pair."
+  },
+  "per_term": {
+    "배포": {
+      "raw_literal_source_rows": 370,
+      "source_only_eligible_unique_rows": 17,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 17,
+      "output_rows_containing_term": 17,
+      "shortfall": 13,
+      "status": "shortage"
+    },
+    "캐시": {
+      "raw_literal_source_rows": 101,
+      "source_only_eligible_unique_rows": 2,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 2,
+      "output_rows_containing_term": 2,
+      "shortfall": 28,
+      "status": "shortage"
+    },
+    "장애 조치": {
+      "raw_literal_source_rows": 1,
+      "source_only_eligible_unique_rows": 0,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 0,
+      "output_rows_containing_term": 0,
+      "shortfall": 30,
+      "status": "no_eligible_candidates"
+    },
+    "부하 분산": {
+      "raw_literal_source_rows": 4,
+      "source_only_eligible_unique_rows": 0,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 0,
+      "output_rows_containing_term": 0,
+      "shortfall": 30,
+      "status": "no_eligible_candidates"
+    },
+    "지속적 통합": {
+      "raw_literal_source_rows": 2,
+      "source_only_eligible_unique_rows": 0,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 0,
+      "output_rows_containing_term": 0,
+      "shortfall": 30,
+      "status": "no_eligible_candidates"
+    },
+    "회귀 테스트": {
+      "raw_literal_source_rows": 2,
+      "source_only_eligible_unique_rows": 0,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 0,
+      "output_rows_containing_term": 0,
+      "shortfall": 30,
+      "status": "no_eligible_candidates"
+    },
+    "롤백": {
+      "raw_literal_source_rows": 8,
+      "source_only_eligible_unique_rows": 1,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 1,
+      "output_rows_containing_term": 1,
+      "shortfall": 29,
+      "status": "shortage"
+    },
+    "메모리 누수": {
+      "raw_literal_source_rows": 22,
+      "source_only_eligible_unique_rows": 0,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 0,
+      "output_rows_containing_term": 0,
+      "shortfall": 30,
+      "status": "no_eligible_candidates"
+    },
+    "접근 제어": {
+      "raw_literal_source_rows": 10,
+      "source_only_eligible_unique_rows": 1,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 1,
+      "output_rows_containing_term": 1,
+      "shortfall": 29,
+      "status": "shortage"
+    },
+    "벡터 검색": {
+      "raw_literal_source_rows": 0,
+      "source_only_eligible_unique_rows": 0,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 0,
+      "output_rows_containing_term": 0,
+      "shortfall": 30,
+      "status": "no_eligible_candidates"
+    },
+    "서버": {
+      "raw_literal_source_rows": 322,
+      "source_only_eligible_unique_rows": 24,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 24,
+      "output_rows_containing_term": 24,
+      "shortfall": 6,
+      "status": "shortage"
+    },
+    "소프트웨어": {
+      "raw_literal_source_rows": 1947,
+      "source_only_eligible_unique_rows": 144,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 30,
+      "output_rows_containing_term": 45,
+      "shortfall": 0,
+      "status": "target_met"
+    },
+    "데이터베이스": {
+      "raw_literal_source_rows": 499,
+      "source_only_eligible_unique_rows": 47,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 30,
+      "output_rows_containing_term": 31,
+      "shortfall": 0,
+      "status": "target_met"
+    },
+    "운영 체제": {
+      "raw_literal_source_rows": 270,
+      "source_only_eligible_unique_rows": 23,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 23,
+      "output_rows_containing_term": 23,
+      "shortfall": 7,
+      "status": "shortage"
+    },
+    "클라우드 컴퓨팅": {
+      "raw_literal_source_rows": 253,
+      "source_only_eligible_unique_rows": 24,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 24,
+      "output_rows_containing_term": 24,
+      "shortfall": 6,
+      "status": "shortage"
+    },
+    "오픈 소스": {
+      "raw_literal_source_rows": 168,
+      "source_only_eligible_unique_rows": 15,
+      "requested_review_pool_rows": 30,
+      "sampled_for_term": 15,
+      "output_rows_containing_term": 15,
+      "shortfall": 15,
+      "status": "shortage"
+    }
+  },
+  "shortage_terms": [
+    {
+      "term": "배포",
+      "shortfall": 13,
+      "sampled_for_term": 17,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "캐시",
+      "shortfall": 28,
+      "sampled_for_term": 2,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "장애 조치",
+      "shortfall": 30,
+      "sampled_for_term": 0,
+      "requested_review_pool_rows": 30,
+      "status": "no_eligible_candidates"
+    },
+    {
+      "term": "부하 분산",
+      "shortfall": 30,
+      "sampled_for_term": 0,
+      "requested_review_pool_rows": 30,
+      "status": "no_eligible_candidates"
+    },
+    {
+      "term": "지속적 통합",
+      "shortfall": 30,
+      "sampled_for_term": 0,
+      "requested_review_pool_rows": 30,
+      "status": "no_eligible_candidates"
+    },
+    {
+      "term": "회귀 테스트",
+      "shortfall": 30,
+      "sampled_for_term": 0,
+      "requested_review_pool_rows": 30,
+      "status": "no_eligible_candidates"
+    },
+    {
+      "term": "롤백",
+      "shortfall": 29,
+      "sampled_for_term": 1,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "메모리 누수",
+      "shortfall": 30,
+      "sampled_for_term": 0,
+      "requested_review_pool_rows": 30,
+      "status": "no_eligible_candidates"
+    },
+    {
+      "term": "접근 제어",
+      "shortfall": 29,
+      "sampled_for_term": 1,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "벡터 검색",
+      "shortfall": 30,
+      "sampled_for_term": 0,
+      "requested_review_pool_rows": 30,
+      "status": "no_eligible_candidates"
+    },
+    {
+      "term": "서버",
+      "shortfall": 6,
+      "sampled_for_term": 24,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "운영 체제",
+      "shortfall": 7,
+      "sampled_for_term": 23,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "클라우드 컴퓨팅",
+      "shortfall": 6,
+      "sampled_for_term": 24,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    },
+    {
+      "term": "오픈 소스",
+      "shortfall": 15,
+      "sampled_for_term": 15,
+      "requested_review_pool_rows": 30,
+      "status": "shortage"
+    }
+  ],
+  "candidate_output": {
+    "path": "artifacts/eda/evaluation_candidates.jsonl",
+    "row_count": 154,
+    "sha256": "d4ee9803220a6179637a0d9557a5dc93ad4a6d2791f1567ff60a70a50103c9c2",
+    "ordered_source_id_sha256": "d1569864b0ee4b7dd2328a9f2c30f721099c166327ed809a6e03b26480b4a51b",
+    "review_status": "unreviewed"
+  },
+  "next_required_gate": "Bilingual manual alignment and domain-sense review; do not benchmark or freeze the final 30-50 set from this file automatically."
+}

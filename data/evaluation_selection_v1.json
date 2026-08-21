@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "status": "HUMAN_CONFIRMED_FINAL",
+  "human_confirmed": true,
+  "candidate_file": "artifacts/eda/evaluation_candidates.jsonl",
+  "candidate_sha256": "d4ee9803220a6179637a0d9557a5dc93ad4a6d2791f1567ff60a70a50103c9c2",
+  "glossary_file": "data/glossary_evaluation_v2.csv",
+  "glossary_sha256": "476f0a3476e24c2b0bf66fae4e3e22dc97b4018dda91d68ef66d1c03d506a1d4",
+  "reference_review_file": "reference_reviews/evaluation_v1.json",
+  "reference_review_sha256": "9e5eefc70976104e4e77ee79a1401ea87a511d1f0d25b83ec9a2e6acbeace2ba",
+  "review_files": [
+    "artifacts/reviews/evaluation_candidates_review_a.json",
+    "artifacts/reviews/evaluation_candidates_review_b.json",
+    "artifacts/reviews/evaluation_candidates_review_c.json"
+  ],
+  "selection_metadata": {
+    "reviewer_type": "human_user",
+    "model_outputs_consulted": false,
+    "selection_size": 40,
+    "eligible_decision": "KEEP",
+    "conflict_policy": "Exclude any row marked REJECT or AMBIGUOUS by another applicable review.",
+    "duplicate_policy": "Deduplicate by source_record_id before quota assignment.",
+    "ordering": "Deterministic round-robin across primary strata, preserving the explicit order in selected.",
+    "primary_stratum_quotas": {
+      "캐시": 1,
+      "배포": 4,
+      "서버": 5,
+      "데이터베이스": 8,
+      "소프트웨어": 7,
+      "운영 체제": 5,
+      "클라우드 컴퓨팅": 5,
+      "오픈 소스": 5
+    },
+    "diversity_rationale": "Balance terminology while retaining the sole acceptable cache case; vary infrastructure, databases, systems, developer tools, security, testing, desktop, web, mobile, embedded, and cloud contexts; avoid near-duplicate product and topic examples where possible.",
+    "human_review_completed": true
+  },
+  "selected": [
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000248362",
+      "selection_note": "희소 캐시 용례와 서버 상호작용을 함께 확인할 수 있는 브라우저 갱신 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000027425",
+      "selection_note": "CRUD 연산과 데이터베이스 관리가 직접 대응하는 대표 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000309601",
+      "selection_note": "임베디드 시스템의 실시간 운영 체제를 정의하는 명확한 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000301680",
+      "selection_note": "Kubernetes의 애플리케이션 배포를 다루는 대표 컨테이너 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000180802",
+      "selection_note": "Clang·Swift 관계의 기술적 사실성 위험이 있는 기존 후보를 대신한, Apache의 오픈 소스 성격이 명확한 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000009364",
+      "selection_note": "Git을 사용하는 소프트웨어 개발자의 변경 관리 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000227701",
+      "selection_note": "클라우드 컴퓨팅과 보안의 관계가 직접 드러나는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000120253",
+      "selection_note": "브라우저 실행과 서버 의존성을 대비하는 짧은 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000061027",
+      "selection_note": "여러 서버의 부하 분산과 장애 방지를 설명하는 인프라 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000226135",
+      "selection_note": "동시 접근 시 데이터베이스 무결성을 다루는 구체적 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000291918",
+      "selection_note": "Bash와 Linux·Unix 계열 운영 체제의 관계를 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000313628",
+      "selection_note": "Docker 기반 애플리케이션 배포를 다루는 컨테이너 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000435272",
+      "selection_note": "Arduino의 오픈 소스 하드웨어·소프트웨어 성격을 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000260457",
+      "selection_note": "디자인 패턴을 소프트웨어 개발의 재사용 해법으로 설명하는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000237555",
+      "selection_note": "클라우드 컴퓨팅 환경의 부하 분산 적용을 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000052702",
+      "selection_note": "Node의 서버 사이드 JavaScript 실행을 설명하는 런타임 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000422675",
+      "selection_note": "데이터베이스 쿼리의 검색·정렬·그룹화 기능을 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000267500",
+      "selection_note": "운영 체제 개발과 어셈블리어의 관계를 다루는 시스템 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000105340",
+      "selection_note": "웹사이트 개발 생명주기의 배포 단계를 포함하는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000084324",
+      "selection_note": "GitHub의 오픈 소스 프로젝트 호스팅을 다루는 협업 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000352379",
+      "selection_note": "버그 추적 시스템과 소프트웨어 품질을 연결하는 개발 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000450346",
+      "selection_note": "데이터센터와 클라우드 컴퓨팅 성장을 연결하는 인프라 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000213482",
+      "selection_note": "데이터베이스 관리와 서버 구성을 함께 포함하는 개발자 업무 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000453099",
+      "selection_note": "데이터베이스의 null 값을 설명하는 짧고 명확한 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000148336",
+      "selection_note": "재부팅 중 운영 체제 재로딩을 묘사하는 실제 동작 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000457119",
+      "selection_note": "저코드 플랫폼에서 앱을 구축하고 배포하는 제품 개발 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000351923",
+      "selection_note": "Consul을 오픈 소스 서비스 검색 도구로 설명하는 분산 시스템 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000126507",
+      "selection_note": "오피스 스위트를 여러 응용 소프트웨어의 패키지로 설명하는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000069623",
+      "selection_note": "클라우드 컴퓨팅에서 확장성의 중요성을 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000101003",
+      "selection_note": "중앙 서버가 없는 P2P 구조를 설명하는 네트워크 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000169787",
+      "selection_note": "데이터베이스 설계·통합·마이그레이션을 포괄하는 데이터 모델링 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000273268",
+      "selection_note": "운영 체제 설정에서 언어·시간대·화면을 구성하는 사용자 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000436174",
+      "selection_note": ".NET의 오픈 소스·크로스 플랫폼 성격을 다루는 프레임워크 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000289409",
+      "selection_note": "안티바이러스 소프트웨어의 보호 기능을 다루는 보안 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127912",
+      "selection_note": "대상이 불명확한 '외부화' 후보를 대신해 클라우드 컴퓨팅의 소프트웨어 개발 활용을 직접 설명하는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000376459",
+      "selection_note": "데이터베이스를 포함한 시스템 성능 테스트 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000152777",
+      "selection_note": "Java의 엔터프라이즈·모바일 소프트웨어 개발 용례를 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000090014",
+      "selection_note": "정보 검색 시스템의 데이터베이스 검색 응용을 다루는 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000484517",
+      "selection_note": "소프트웨어 개발에서 근본 원인 분석을 적용하는 품질 문맥."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000483068",
+      "selection_note": "데이터베이스 쿼리의 삽입·수정·삭제 기능을 다루는 변경 문맥."
+    }
+  ],
+  "review_workbook_file": "outputs/01a01c85-3942-7583-bfed-366c3c0b2b2f/evaluation_v1_review_confirmed.xlsx",
+  "review_workbook_sha256": "ffb526f7fb278582a456fe24fa21e21b50207cc2317d69aa25a1c3d04580471a",
+  "review_confirmation": {
+    "kind": "explicit_user_confirmation_in_conversation",
+    "basis": "The user explicitly stated in this task conversation: 검수끝냈어",
+    "reviewer": "User",
+    "reviewed_at_utc": "2026-08-20T11:47:56Z"
+  }
+}

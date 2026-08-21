@@ -1,0 +1,33 @@
+{
+  "status": "AI_ASSISTED_DRAFT_NOT_HUMAN_CONFIRMED",
+  "human_confirmed": false,
+  "benchmark_allowed": false,
+  "case_count": 40,
+  "distinct_term_count": 8,
+  "term_case_counts": {
+    "데이터베이스": 9,
+    "배포": 4,
+    "서버": 6,
+    "소프트웨어": 9,
+    "오픈 소스": 5,
+    "운영 체제": 5,
+    "캐시": 1,
+    "클라우드 컴퓨팅": 5
+  },
+  "ordered_source_id_sha256": "b4f4ba69d7867c323deb2b545b87f040b114a37db0386ab68e08dc6009f001c8",
+  "candidate_sha256": "d4ee9803220a6179637a0d9557a5dc93ad4a6d2791f1567ff60a70a50103c9c2",
+  "manifest_sha256": "7e0cbdc98585548da305b6eccac1466136dc2e722e93093158e303ff7ab87594",
+  "glossary_sha256": "476f0a3476e24c2b0bf66fae4e3e22dc97b4018dda91d68ef66d1c03d506a1d4",
+  "reference_review_sha256": "8928333231cce9e1871c68dd70e50d3757ff77b3fa765942d5b09d61629d6b48",
+  "reference_review_human_confirmed": false,
+  "reference_decision_counts": {
+    "corrected": 6,
+    "unreviewed": 34
+  },
+  "source_feedback_sha256": "099b40811f3d3c9453c8c33e60f7d163d0ea84d2d529ff986ecdc65458d01e7b",
+  "original_reference_set_sha256": "90f510abbf86eec841f48f97a17420e4168dd3e5e567b15a30c6ad462a5266b6",
+  "effective_reference_set_sha256": "68e0b366b5bd4038c583143a8205eb256773258f5dd240b201fd13b56fad328e",
+  "dataset_sha256": "1599fc95fb9262460f9d20029d9c5ba68cdb78b03eb323c79e7ac38941db1709",
+  "reference_exposed_to_runtime": false,
+  "manual_agent_labels_included": false
+}

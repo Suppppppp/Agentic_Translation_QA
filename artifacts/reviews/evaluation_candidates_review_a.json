@@ -1,0 +1,591 @@
+{
+  "review_metadata": {
+    "reviewer_type": "ai_assisted_draft",
+    "human_confirmed": false,
+    "source_file": "artifacts/eda/evaluation_candidates.jsonl",
+    "scope_terms": [
+      "배포",
+      "캐시",
+      "롤백",
+      "접근 제어",
+      "서버"
+    ],
+    "glossary_targets": {
+      "배포": "deployment/deploy",
+      "캐시": "cache",
+      "롤백": "rollback/roll back",
+      "접근 제어": "access control",
+      "서버": "server"
+    },
+    "reviewed_row_count": 44,
+    "model_outputs_consulted": false,
+    "review_basis": [
+      "Korean-English reference alignment",
+      "actual software-domain sense",
+      "contextual fit of the glossary target"
+    ],
+    "usage_note": "Draft screening only; every KEEP and AMBIGUOUS row requires human bilingual confirmation before becoming final gold data."
+  },
+  "summary": {
+    "KEEP": 26,
+    "REJECT": 14,
+    "AMBIGUOUS": 4,
+    "recommended_keep_count": 26
+  },
+  "reviews": [
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000009387",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "인터넷 서비스를 제공하는 컴퓨팅 서버 의미이며 reference와 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000011552",
+      "hit_terms": ["서버", "클라우드 컴퓨팅"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "서버 직접 관리와 클라우드 서비스의 대비가 양 언어에서 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000036393",
+      "hit_terms": ["배포", "소프트웨어"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": false,
+      "reason": "자유 소프트웨어의 복제·유통 권리로서 distribute이며 실행 환경 deployment 의미가 아니다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000052702",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Node의 server-side 실행 문맥이 명확하고 reference와 자연스럽게 정렬된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000059773",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "클라우드 네이티브 애플리케이션을 deploy하는 전형적인 소프트웨어 배포 문맥이다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000061027",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "로드 밸런싱에서 여러 servers에 트래픽을 분산하는 의미가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000070455",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": false,
+      "reason": "게임을 소비자에게 distribute하는 유통 의미로, 시스템에 deploy하는 용례가 아니다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000077065",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "여러 매체를 통한 콘텐츠 유통이며 software deployment가 아니다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000085617",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "대상이 특정되지 않은 무단 복제·distribution 문장이라 소프트웨어 배포 평가에 부적합하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000094865",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "개발자가 클라우드 네이티브 앱을 build, deploy, manage하는 문맥이 명확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000101003",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "P2P 네트워크의 중앙 server 부재를 설명하며 양 언어 의미가 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000105340",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "웹 개발 생명주기의 deployment 단계로 glossary 의미와 정확히 맞는다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000120253",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "브라우저 실행과 server 의존성을 대비하는 소프트웨어 문맥이 정렬된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127266",
+      "hit_terms": ["서버", "데이터베이스"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "멀티스레딩 응용 예시의 web servers와 database applications가 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000144809",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "스마트 계약을 build and deploy하는 블록체인 소프트웨어 문맥이 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000190413",
+      "hit_terms": ["서버"],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": false,
+      "term_sense_ok": true,
+      "reason": "Korean의 비표준 '서지리스 전원'이 English surge protectors와 불안정하게 대응하고 전자장비 문맥이다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000206407",
+      "hit_terms": ["서버"],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": null,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "game server 의미는 맞지만 Korean의 '래거'가 English lag와 정확히 대응하는지 사람 확인이 필요하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000211902",
+      "hit_terms": ["서버"],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "English에 data 보호가 추가되어 있고 동일 내용의 근접 중복 후보도 있어 reference 품질이 부족하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000213482",
+      "hit_terms": ["서버", "데이터베이스"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "개발자가 databases를 관리하고 servers를 구성한 세 동작이 정확히 정렬된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000213742",
+      "hit_terms": ["접근 제어"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": true,
+      "reason": "NFC의 결제·물리 접근 응용에 가까워 software resource access-control 평가 문맥으로 보기 어렵다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000216119",
+      "hit_terms": ["서버"],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": null,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "server rack 의미는 맞지만 데이터센터 서비스 목록에서 rack이 반복되어 문장 정합성을 재확인해야 한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000235980",
+      "hit_terms": ["서버", "소프트웨어"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Apache를 web server software로 설명하며 핵심 용어와 reference가 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000245569",
+      "hit_terms": ["롤백", "소프트웨어"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "코드 변경을 이전 상태로 roll back하는 명확한 소프트웨어 복구 문맥이다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000248362",
+      "hit_terms": ["캐시", "서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "browser cache 삭제와 server에서 최신 페이지를 가져오는 두 용어가 모두 정확히 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000251536",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "가상화의 server consolidation 용례가 IT 인프라 문맥에서 자연스럽게 대응한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000252163",
+      "hit_terms": ["캐시"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": true,
+      "reason": "CPU cache size라는 하드웨어 사양으로, 소프트웨어 임시 저장소 평가 범위와 다르다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000262627",
+      "hit_terms": ["배포", "소프트웨어"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "소프트웨어 개발 단계의 deployment를 명시하여 glossary 정의와 직접 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000264144",
+      "hit_terms": ["서버"],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Korean '어드민들'과 English 'Adminicles'가 불명확하고 사람을 도구로 서술해 pair 품질이 낮다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000276986",
+      "hit_terms": ["서버"],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "English의 data가 Korean에 없고 211902와 사실상 중복이라 최종셋 품질에 부적합하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000284363",
+      "hit_terms": ["서버", "소프트웨어"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Apache web server software가 페이지와 파일을 제공한다는 의미가 충실히 정렬된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000301680",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Kubernetes의 application deployment 자동화 문맥으로 가장 직접적인 glossary 용례다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000313628",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Docker가 application deployment를 쉽게 한다는 소프트웨어 문맥과 reference가 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000325690",
+      "hit_terms": ["서버"],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": null,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "central server 의미는 맞지만 '데이넷/day-net'이라는 네트워크 명칭의 정합성과 품질을 확인해야 한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000356326",
+      "hit_terms": ["서버", "클라우드 컴퓨팅"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "Ubuntu의 desktop, server, cloud computing 사용 범주가 양 언어에서 동일하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000370807",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "다양한 화면의 기기에 앱을 deploy하는 모바일 소프트웨어 문맥이 명확하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000378689",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "마케팅 콘텐츠를 채널에 distribute하는 의미로 software deployment와 무관하다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000416578",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "server와 network 재구성의 자원·보안·성능 목적이 reference와 일치한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000429478",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "음악을 아티스트나 레이블이 distributed하는 유통 의미다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000438362",
+      "hit_terms": ["서버"],
+      "decision": "AMBIGUOUS",
+      "alignment_ok": null,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "game server 문맥은 맞지만 Korean '래거'와 English lag의 품질을 사람 검수해야 한다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000455777",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": false,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "회의록과 transcript가 완전히 같지 않고 이메일 distribution은 software deployment가 아니다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000457119",
+      "hit_terms": ["배포"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "저코드 플랫폼에서 앱을 build and deploy하는 전형적인 소프트웨어 용례다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000462106",
+      "hit_terms": ["배포"],
+      "decision": "REJECT",
+      "alignment_ok": true,
+      "software_domain_ok": false,
+      "term_sense_ok": false,
+      "reason": "온라인·오프라인·소셜 채널을 통한 자료 유통으로 deployment 의미가 아니다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000483320",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "NAS를 중앙 파일 저장소 접근을 제공하는 storage server로 설명하며 정렬된다."
+    },
+    {
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000483483",
+      "hit_terms": ["서버"],
+      "decision": "KEEP",
+      "alignment_ok": true,
+      "software_domain_ok": true,
+      "term_sense_ok": true,
+      "reason": "nginx의 high-performance web server 의미와 성능 속성이 정확히 대응한다."
+    }
+  ],
+  "recommended_keep": [
+    {
+      "priority": 1,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000248362",
+      "hit_terms": ["캐시", "서버"],
+      "reason": "두 핵심 용어가 포함된 명확한 브라우저-서버 흐름"
+    },
+    {
+      "priority": 2,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000245569",
+      "hit_terms": ["롤백", "소프트웨어"],
+      "reason": "범위 내 유일한 명확한 software rollback 사례"
+    },
+    {
+      "priority": 3,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000301680",
+      "hit_terms": ["배포"],
+      "reason": "Kubernetes application deployment의 직접적인 용례"
+    },
+    {
+      "priority": 4,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000061027",
+      "hit_terms": ["서버"],
+      "reason": "로드 밸런싱과 다중 서버의 구체적인 인프라 문맥"
+    },
+    {
+      "priority": 5,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000313628",
+      "hit_terms": ["배포"],
+      "reason": "Docker application deployment 용례"
+    },
+    {
+      "priority": 6,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000052702",
+      "hit_terms": ["서버"],
+      "reason": "Node server-side 실행의 간결한 문장"
+    },
+    {
+      "priority": 7,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000213482",
+      "hit_terms": ["서버", "데이터베이스"],
+      "reason": "서버 구성과 데이터베이스 관리의 명확한 동작 문맥"
+    },
+    {
+      "priority": 8,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000105340",
+      "hit_terms": ["배포"],
+      "reason": "웹 개발 생명주기의 deployment 단계"
+    },
+    {
+      "priority": 9,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000101003",
+      "hit_terms": ["서버"],
+      "reason": "P2P와 중앙 서버 부재의 명확한 대비"
+    },
+    {
+      "priority": 10,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000262627",
+      "hit_terms": ["배포", "소프트웨어"],
+      "reason": "software development 단계의 직접적인 deployment 용례"
+    },
+    {
+      "priority": 11,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000483483",
+      "hit_terms": ["서버"],
+      "reason": "nginx web server의 구체적인 성능 문맥"
+    },
+    {
+      "priority": 12,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000457119",
+      "hit_terms": ["배포"],
+      "reason": "저코드 플랫폼의 app deploy 용례"
+    },
+    {
+      "priority": 13,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000251536",
+      "hit_terms": ["서버"],
+      "reason": "virtualization과 server consolidation 문맥"
+    },
+    {
+      "priority": 14,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000370807",
+      "hit_terms": ["배포"],
+      "reason": "기기 대상 app deployment의 변별력 있는 문맥"
+    },
+    {
+      "priority": 15,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000009387",
+      "hit_terms": ["서버"],
+      "reason": "인터넷 서비스 제공 서버의 안정적인 기준 문장"
+    },
+    {
+      "priority": 16,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000235980",
+      "hit_terms": ["서버", "소프트웨어"],
+      "reason": "Apache web server software의 직접적인 용례"
+    },
+    {
+      "priority": 17,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000284363",
+      "hit_terms": ["서버", "소프트웨어"],
+      "reason": "Apache가 파일을 제공하는 server 동작 문맥"
+    },
+    {
+      "priority": 18,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000094865",
+      "hit_terms": ["배포"],
+      "reason": "클라우드 네이티브 앱의 build-deploy-manage 문맥"
+    },
+    {
+      "priority": 19,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000059773",
+      "hit_terms": ["배포"],
+      "reason": "클라우드 네이티브 앱 deploy의 간결한 용례"
+    },
+    {
+      "priority": 20,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000356326",
+      "hit_terms": ["서버", "클라우드 컴퓨팅"],
+      "reason": "Ubuntu 사용 범주의 server와 cloud computing"
+    },
+    {
+      "priority": 21,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000416578",
+      "hit_terms": ["서버"],
+      "reason": "server reconfiguration의 구체적인 작업 문맥"
+    },
+    {
+      "priority": 22,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000120253",
+      "hit_terms": ["서버"],
+      "reason": "브라우저와 server 의존성의 짧은 대비 문장"
+    },
+    {
+      "priority": 23,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127266",
+      "hit_terms": ["서버", "데이터베이스"],
+      "reason": "web server와 database application의 복수 문맥"
+    },
+    {
+      "priority": 24,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000144809",
+      "hit_terms": ["배포"],
+      "reason": "smart contract deploy의 블록체인 문맥"
+    },
+    {
+      "priority": 25,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000011552",
+      "hit_terms": ["서버", "클라우드 컴퓨팅"],
+      "reason": "직접 서버 관리와 cloud service의 대비"
+    },
+    {
+      "priority": 26,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000483320",
+      "hit_terms": ["서버"],
+      "reason": "NAS를 storage server로 설명하는 인프라 문맥"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "automatic_severity_labels_generated": false,
+  "base_review_csv_file": "data/manual_reviews/evaluation_v1_batch1/review_labels.csv",
+  "base_review_csv_sha256": "3c2a8cb87bcbd972f66c40a48d1a455446f9b26f61186c0727e516761d0c62df",
+  "base_selection_file": "data/manual_reviews/evaluation_v1_batch1/selection.json",
+  "base_selection_sha256": "301848b0097f7ed94ca6403ae3846831e7eb9e6b656f16cb1030f1db65cc0684",
+  "baseline_csv_file": "data/manual_reviews/evaluation_v1_batch1_severity/severity_labels.csv",
+  "baseline_csv_sha256": "bee5b0f50e995fdb0adfa3f8d55ef192833224b22c78c808dca9652a20b381c8",
+  "batch_id": "evaluation_v1_batch1_severity",
+  "immutable_values_verified": true,
+  "ingest_kind": "severity-supplement",
+  "ingested_at_utc": "2026-08-20T18:24:27.673402Z",
+  "manual_fields_copied": [
+    "manual_severity",
+    "severity_reviewer",
+    "severity_note"
+  ],
+  "manual_review_schema_version": 2,
+  "output_csv_file": "data/manual_reviews/evaluation_v1_batch1_severity/review_labels_with_severity.csv",
+  "output_csv_sha256": "0bec42e8cf02d262687d2b5786a562fe809f9434228f437432cdaa5d4809ad92",
+  "ready_count": 10,
+  "schema_version": 1,
+  "selected_count": 10,
+  "selection_manifest_file": "data/manual_reviews/evaluation_v1_batch1_severity/selection.json",
+  "selection_manifest_sha256": "b4ae590193c06dc0bf37c54889bde640314955f3bc0fc33fd05535019efca515",
+  "severity_annotations": [
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-004::agent",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-004::agent_rag",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-009::agent",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-009::agent_rag",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-019::agent",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-019::agent_rag",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-024::agent",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-024::agent_rag",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-027::agent",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    },
+    {
+      "manual_severity": "MAJOR",
+      "review_key": "evaluation-v1-027::agent_rag",
+      "severity_note": "",
+      "severity_reviewer": "Sup"
+    }
+  ],
+  "severity_counts": {
+    "MAJOR": 10,
+    "MINOR": 0
+  },
+  "severity_required_count": 10,
+  "source_range": "A1:L11",
+  "source_sheet": "Severity Review",
+  "source_workbook_file": "outputs/01a0205c-c18c-71b2-8bcd-dc64888d032b/evaluation_v1_manual_review_batch1_severity_supplement_sup_reviewed.xlsx",
+  "source_workbook_sha256": "2bed78cf44f4715281ec6ff91413b087ac217959de2fbd9dd7d13ccaa32b7cb2"
+}

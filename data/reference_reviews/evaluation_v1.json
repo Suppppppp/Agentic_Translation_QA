@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "review_status": "human_confirmed",
+  "human_confirmed": true,
+  "candidate_file": "artifacts/eda/evaluation_candidates.jsonl",
+  "candidate_sha256": "d4ee9803220a6179637a0d9557a5dc93ad4a6d2791f1567ff60a70a50103c9c2",
+  "selection_manifest_file": "data/evaluation_selection_v1.json",
+  "ordered_source_id_sha256": "b4f4ba69d7867c323deb2b545b87f040b114a37db0386ab68e08dc6009f001c8",
+  "reviewer_type": "human_user",
+  "reviewer": "User",
+  "reviewed_at_utc": "2026-08-20T11:47:56Z",
+  "review_workbook_file": "outputs/01a01c85-3942-7583-bfed-366c3c0b2b2f/evaluation_v1_review_confirmed.xlsx",
+  "review_workbook_sha256": "ffb526f7fb278582a456fe24fa21e21b50207cc2317d69aa25a1c3d04580471a",
+  "confirmation": {
+    "kind": "explicit_user_confirmation_in_conversation",
+    "basis": "The user explicitly stated in this task conversation: 검수끝냈어"
+  },
+  "original_reference_sha256_contract": "SHA-256 of the exact UTF-8 english_reference string from the anchored candidate file, with no trailing newline.",
+  "reference_policy": {
+    "public_candidate_reference_preserved": true,
+    "corrections_are_overlay_only": true,
+    "application_boundary": "explicit_offline_materialization_only_never_runtime"
+  },
+  "decisions": [
+    {
+      "case_order": 1,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000248362",
+      "decision": "keep_original",
+      "original_reference_sha256": "beed4deb13695f75721b96e9753fb3292024f59634d79e02ec18b8375df71c6b"
+    },
+    {
+      "case_order": 2,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000027425",
+      "decision": "keep_original",
+      "original_reference_sha256": "354f6eb403d48464c0246088a81539edf72514762a5ff3763d32bfacc2433ea7"
+    },
+    {
+      "case_order": 3,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000309601",
+      "decision": "keep_original",
+      "original_reference_sha256": "3fad63192ea4ac480aa8e0d61649040d1037b0d55bcc6c73d7ee18d047876318"
+    },
+    {
+      "case_order": 4,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000301680",
+      "decision": "keep_original",
+      "original_reference_sha256": "fd44e043ea5bb4068e112e3fe41c8bb746cc3cfe20b204bdbeac19dc89e3284e"
+    },
+    {
+      "case_order": 5,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000180802",
+      "decision": "keep_original",
+      "original_reference_sha256": "43c88bf2835fd64935f500da12017c22ad18e327d19f1f828338061b114ee76e"
+    },
+    {
+      "case_order": 6,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000009364",
+      "decision": "keep_original",
+      "original_reference_sha256": "7e71928b4f86d89c2fcb26088867a72229b9c51d174ba68aaf5fcc44e56fa737"
+    },
+    {
+      "case_order": 7,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000227701",
+      "decision": "keep_original",
+      "original_reference_sha256": "502eb34548f528ed42a0710862d2cf5bf2f4a09560a25dad58f779ce39705485"
+    },
+    {
+      "case_order": 8,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000120253",
+      "decision": "corrected",
+      "original_reference_sha256": "dc25b2b91d72938aea749cc6688dbdd93edb9fd35e3922a6982ad040144bc9aa",
+      "corrected_reference_text": "JavaScript runs in the browser, so it does not rely on a server.",
+      "rationale": "선행 문맥에서 특정 서버가 정의되지 않아 일반적인 서버를 가리키는 부정관사 a가 더 자연스럽다."
+    },
+    {
+      "case_order": 9,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000061027",
+      "decision": "corrected",
+      "original_reference_sha256": "f3db95c616085bd1b287f025e9fe081294d5af8a7513c482de0e94b87f60f296",
+      "corrected_reference_text": "Load balancing is a technique that distributes traffic across multiple servers to protect applications from a single point of failure and improve performance.",
+      "rationale": "복수형도 실제로 쓰이지만, 원문의 단수 개념과 관용적인 a single point of failure가 더 직접 대응한다."
+    },
+    {
+      "case_order": 10,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000226135",
+      "decision": "keep_original",
+      "original_reference_sha256": "9669c4143985d38e949192dff21ccae5d9ccb80da1727c249d2ae8a72c413674"
+    },
+    {
+      "case_order": 11,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000291918",
+      "decision": "corrected",
+      "original_reference_sha256": "d4af6fc779af6ab37b2c04aa7382daa6673d0a6f45690705febc44e3e83abcaf",
+      "corrected_reference_text": "Bash is a shell used to execute commands on Linux and Unix-like operating systems.",
+      "rationale": "운영 체제 위에서 실행된다는 관계에는 on이 적합하고 execute commands가 기술 문체에 자연스럽다."
+    },
+    {
+      "case_order": 12,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000313628",
+      "decision": "keep_original",
+      "original_reference_sha256": "25ce08e56ff886b7f532d3c4b95254e4cc8e60730cad38a85edbb647d031f4cc"
+    },
+    {
+      "case_order": 13,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000435272",
+      "decision": "keep_original",
+      "original_reference_sha256": "3d34e2ed8b9b058ecd48c23afd83bdf29972b347ca088de66fc6cb93acb1c692"
+    },
+    {
+      "case_order": 14,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000260457",
+      "decision": "keep_original",
+      "original_reference_sha256": "845fab0fecf926f820f669dc2d7be0656be3a7db85a4b09aea0d5a7cf3dec6fe"
+    },
+    {
+      "case_order": 15,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000237555",
+      "decision": "keep_original",
+      "original_reference_sha256": "b9359990af4f9544243c02d6ae859e311039ddd64e13ce84afcdd40ad9d46dd9"
+    },
+    {
+      "case_order": 16,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000052702",
+      "decision": "corrected",
+      "original_reference_sha256": "f1ac2c9e3d5d366ba9186fb27d9487c8179b53cae0a7c99a7033c25034c47a4c",
+      "corrected_reference_text": "Node.js is a JavaScript runtime environment that enables JavaScript code to run on the server side.",
+      "rationale": "Node.js라는 명칭을 명시하고 2인칭 you를 제거해 다른 평가 문장과 객관적 설명 톤을 맞춘다."
+    },
+    {
+      "case_order": 17,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000422675",
+      "decision": "keep_original",
+      "original_reference_sha256": "0f6c884fceceef13a268ae5e02adfe2ff632de1059e9c3ec34a60584b8bc3919"
+    },
+    {
+      "case_order": 18,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000267500",
+      "decision": "keep_original",
+      "original_reference_sha256": "4f8af39b5d8bf56ed716c725ba41796d416303e09b628a08969254f75b10a47a"
+    },
+    {
+      "case_order": 19,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000105340",
+      "decision": "keep_original",
+      "original_reference_sha256": "5b66e909d704284a6f97377a7593ebdf88783ca3c1f4a153742d1eb999731eae"
+    },
+    {
+      "case_order": 20,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000084324",
+      "decision": "keep_original",
+      "original_reference_sha256": "6c5660e736d45de90c2bd02185dcded95e3b2256e58269aacce30de0f48fb441"
+    },
+    {
+      "case_order": 21,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000352379",
+      "decision": "keep_original",
+      "original_reference_sha256": "8cd98dc141ad3fbe0bea37026532dd5004c0df94027f003236508ac9b5cdb742"
+    },
+    {
+      "case_order": 22,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000450346",
+      "decision": "keep_original",
+      "original_reference_sha256": "2d8ce41f55716375032d90fc2fda410ad27acc710d81741a9cb83dc0c3b70b11"
+    },
+    {
+      "case_order": 23,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000213482",
+      "decision": "keep_original",
+      "original_reference_sha256": "8e6e8085d41264fa447d56b4ac31afbf55591607b10176853d8a462f6ebe540e"
+    },
+    {
+      "case_order": 24,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000453099",
+      "decision": "keep_original",
+      "original_reference_sha256": "38805825fa648615b943046dd505665a29c1b87eca74e1c021a5a5e7f7dd823a"
+    },
+    {
+      "case_order": 25,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000148336",
+      "decision": "keep_original",
+      "original_reference_sha256": "06e88f2f55ef5dea1dbeca9de0debe83cbaa5d3442f71c23eadef1557d6ce7de"
+    },
+    {
+      "case_order": 26,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000457119",
+      "decision": "keep_original",
+      "original_reference_sha256": "4b47df162de300d4bd3b2b7f6905cd5aa48bd44edee7961f8363fc6fed699613"
+    },
+    {
+      "case_order": 27,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000351923",
+      "decision": "keep_original",
+      "original_reference_sha256": "68777b30d9769fbb74d76055df23a3d0a24cedcd37fbd1b66857bb90961bbbf1"
+    },
+    {
+      "case_order": 28,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000126507",
+      "decision": "keep_original",
+      "original_reference_sha256": "bacc6b461fe267efac6e269f39f891ca4f967d0326eb1003a60c08560636a69c"
+    },
+    {
+      "case_order": 29,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000069623",
+      "decision": "keep_original",
+      "original_reference_sha256": "25ca71e316a46c2e127a2d6ce17c1bcad1f968de7c2ab8f284367fa21262dc8b"
+    },
+    {
+      "case_order": 30,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000101003",
+      "decision": "corrected",
+      "original_reference_sha256": "15c63f189062791ee01dfeb2b01abf3cade20b1568ab6089fea911e58dfc428d",
+      "corrected_reference_text": "A peer-to-peer network allows users to connect directly and share files or data without a central server.",
+      "rationale": "Peer-to-peer 개념을 네트워크 실체와 바로 동일시하는 어색한 구조를 피하면서 원문의 직접 연결·공유 의미를 보존한다."
+    },
+    {
+      "case_order": 31,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000169787",
+      "decision": "keep_original",
+      "original_reference_sha256": "8b1d933124df86d301f4e17bac6e515b87dbf1f60fdebc992c7915cb421dabb3"
+    },
+    {
+      "case_order": 32,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000273268",
+      "decision": "keep_original",
+      "original_reference_sha256": "0766fa770e7cc2090df1ed0c63bdf41f101704adfa6b08e583b595cf0e718a5c"
+    },
+    {
+      "case_order": 33,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000436174",
+      "decision": "keep_original",
+      "original_reference_sha256": "5b1bf4d87cb2248aeb287b43023fd3f9a6f3f9639cfa4f625cfbfce4e9bc6de2"
+    },
+    {
+      "case_order": 34,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000289409",
+      "decision": "keep_original",
+      "original_reference_sha256": "9c582c4443af4d07bf0e86d27ee5dd4018caa0e3f4689591d6e793935e642367"
+    },
+    {
+      "case_order": 35,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000127912",
+      "decision": "corrected",
+      "original_reference_sha256": "508087948de12fbda14bc6bc7fb2b890e0fcc18ae6a97f6f169f29ad5acac5f9",
+      "corrected_reference_text": "Cloud computing is used in a wide range of fields, including software development, data analytics, and machine learning.",
+      "rationale": "원문의 '분야'와 열거된 항목은 industries보다 fields에 직접 대응한다."
+    },
+    {
+      "case_order": 36,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000376459",
+      "decision": "keep_original",
+      "original_reference_sha256": "3f081c3b10daa5c258469c96a1656d313bbde77dc791943c8efa8def693f4fb5"
+    },
+    {
+      "case_order": 37,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000152777",
+      "decision": "keep_original",
+      "original_reference_sha256": "61a8d0799ebec8f9bbb38fee6fab8a2e576fedf5c1e6f107d58d9f02f6526979"
+    },
+    {
+      "case_order": 38,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000090014",
+      "decision": "keep_original",
+      "original_reference_sha256": "cfcbf195e8021d578c7eda49bbdc6bb642c0f892833ad93ac1af9aca55de6054"
+    },
+    {
+      "case_order": 39,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000484517",
+      "decision": "keep_original",
+      "original_reference_sha256": "e8299d523d30fa4e36e73f357df58ee102a397bd3c5c5fd0d666dd53d077437b"
+    },
+    {
+      "case_order": 40,
+      "source_record_id": "lemon-mint/korean_parallel_sentences_v1.1@c3ffa5bfe5bf0cd5b4d634e863978b5eb265c9e1:train-00000-of-00001:000483068",
+      "decision": "keep_original",
+      "original_reference_sha256": "a3fc8e7a141599de472a5bb23c6caa1ed9c7984bee4b4bdae8a7d53cbfb1352b"
+    }
+  ],
+  "feedback_file_label": "번역검수.md",
+  "feedback_sha256": "099b40811f3d3c9453c8c33e60f7d163d0ea84d2d529ff986ecdc65458d01e7b"
+}
